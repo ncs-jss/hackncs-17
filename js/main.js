@@ -1,6 +1,5 @@
-// $(window).load(function() {
-// window.onload = function(){
-document.addEventListener("load", function(event) {
+// document.addEventListener("load", function(event) {
+$(window).bind("load", function() {
     console.log('test');
 $(document).ready(function(){
     $("#main-body").removeClass("unloaded");
