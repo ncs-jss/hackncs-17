@@ -1,3 +1,7 @@
+// $(window).load(function() {
+// window.onload = function(){
+document.addEventListener("load", function(event) {
+    console.log('test');
 $(document).ready(function(){
     $("#main-body").removeClass("unloaded");
     $(".preloader-wrapper").removeClass("visible");
@@ -25,3 +29,4 @@ $(document).ready(function(){
     setInterval(changeText,4000);
     setInterval(changeImg,4000);
 })
+});

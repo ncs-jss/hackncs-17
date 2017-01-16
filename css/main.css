@@ -1,52 +1,72 @@
-.images-list img{
-  display: none;
+.images-list img {
+    display: none;
 }
-.images-list img.visible{
-  display: block;
+
+.images-list img.visible {
+    display: block;
 }
-.toi-text{
-  /*display: none;*/
+
+.toi-text {
+    /*display: none;*/
 }
-.toi-text.visible{
-  display: block !important;
+
+.toi-text.visible {
+    display: block !important;
 }
-#main-body.unloaded{
+
+#main-body.unloaded {
     height: 100vh;
     overflow: hidden;
 }
-.preloader-wrapper.visible{
+
+.preloader-wrapper.visible {
     height: 100%;
     overflow: hidden;
     position: relative;
     background: #000;
 }
-.float-menu{
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  z-index: 2;
-}
-.hamburger {
-  
-}
-.bar {
-  height: 5px;
-  width: 32px;
-  background: #fff;
-  margin-bottom: 7px;
-  border-radius: 84px;
-  transition: 0.4s;
-}
-.hamburger:hover .b1 {
-  transform:rotate(45deg);
-  position: absolute;
-  
-    top:20px;
 
+.float-menu {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
 }
+
+.hamburger {}
+
+.bar {
+    height: 5px;
+    width: 32px;
+    background: #fff;
+    margin-bottom: 7px;
+    border-radius: 84px;
+    transition: 0.4s;
+}
+
+.hamburger:hover .b1 {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 20px;
+}
+
 .hamburger:hover .b3 {
-  transform:rotate(-45deg);
+    transform: rotate(-45deg);
 }
+
 .hamburger:hover .b2 {
-  opacity:0;
+    opacity: 0;
+}
+
+.logo-wrapper {
+    position: absolute;
+    height: 100px;
+    width: 215px;
+    bottom: 10px;
+    left: 20px;
+    background: url(/media/logo/ncsncs_logo.png);
+    z-index: 24;
+    /* background: #000; */
+    background-size: cover;
+    background-position: center;
 }
