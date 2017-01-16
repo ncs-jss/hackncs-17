@@ -2375,11 +2375,11 @@ g#wheel_2_ {
 }
 
 .toi-text:after {
-  content: "You Should be too!";
+  content: "We Are The Nibble Computer Society";
   position: absolute;
   font-size: 45px;
   left: 50%;
-  margin-left: -105px;
+  margin-left: -199px;
   margin-bottom: 45px;
   font-family: Blanch Condensed;
   bottom: -3px
@@ -2389,7 +2389,6 @@ g#wheel_2_ {
   width: 100%;
   position: absolute;
   left: 0;
-  top: -35%
 }
 
 .text-on-image-wrapper {
