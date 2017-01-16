@@ -121,11 +121,17 @@ footer {
     height: 100%;
     margin: 0;
 }
-
 #menuModal .modal-content {
     background-color: transparent;
 }
 .line-wrapper {
     display: flex;
     justify-content: center;
+}
+.jc-title-wrapper h2{
+    font-family: Blanch Caps;
+    font-size: 100px;
+}
+#job-listing-wrapper {
+    background-color: rgba(32, 32, 47, 0.91);
 }
