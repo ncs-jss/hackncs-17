@@ -27,6 +27,13 @@ $(document).ready(function(){
     }
     setInterval(changeText,4000);
     setInterval(changeImg,4000);
+    $("#menuModal").on('show.bs.modal', function () {
+        console.log('test');
+        $(".float-menu .hamburger").addClass("closed");
+    });
+    $("#menuModal").on('hide.bs.modal', function () {
+        $(".float-menu .hamburger").removeClass("closed");
+    });
 })
 var el = document.getElementById("customize");
 var ic = document.getElementById('icodir');
