@@ -20,3 +20,33 @@
     position: relative;
     background: #000;
 }
+.float-menu{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+}
+.hamburger {
+  
+}
+.bar {
+  height: 5px;
+  width: 32px;
+  background: #fff;
+  margin-bottom: 7px;
+  border-radius: 84px;
+  transition: 0.4s;
+}
+.hamburger:hover .b1 {
+  transform:rotate(45deg);
+  position: absolute;
+  
+    top:20px;
+
+}
+.hamburger:hover .b3 {
+  transform:rotate(-45deg);
+}
+.hamburger:hover .b2 {
+  opacity:0;
+}
