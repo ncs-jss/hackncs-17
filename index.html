@@ -12,12 +12,31 @@
 </head>
 
 <body id="main-body" class="unloaded">
-    <div class="float-menu">
+    <div class="float-menu" data-toggle="modal" data-target="#myModal">
         <div class="hamburger">
             <div class="bar b1"></div>
             <div class="bar b2"></div>
             <div class="bar b3"></div>
         </div>
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
     </div>
     <div class="container-wrapper preloader-wrapper visible">
     </div>
@@ -62,67 +81,62 @@
     <div class="stats-grid-row" id="sg-row-1">
         <div class="stats-grid-box anim-in-view" id="sgb-1">
             <div class="stat-inside-main">
-                <img src="./images/stats-grid/stat-1.svg" alt="">
+                <img src="media/numbers/since.svg" alt="">
             </div>
-            <div class="stats-extras-wrapper">
+<!--             <div class="stats-extras-wrapper">
                 <div class="stats-extra" id="se1-1"><img src="./images/stats-grid/stat-1-extra-01.svg" alt=""></div>
                 <div class="stats-extra" id="se1-2"><img src="./images/stats-grid/stat-1-extra-02.svg" alt=""></div>
                 <div class="stats-extra" id="se1-3"><img src="./images/stats-grid/stat-1-extra-03.svg" alt=""></div>
-            </div>
-            <p class="stat-content" style="display: block;">Movie Posters</p>
+            </div> -->
+            <p class="stat-content" style="display: block;">Since</p>
         </div>
         <div class="stats-grid-box anim-in-view" id="sgb-2">
-            <div class="stat-inside-main"><img src="./images/stats-grid/stat-2.svg" alt=""></div>
-            <div class="stats-extras-wrapper">
+            <div class="stat-inside-main"><img src="media/numbers/events.svg" alt=""></div>
+            <!-- <div class="stats-extras-wrapper">
                 <div class="stats-extra" id="se2-1"><img src="./images/stats-grid/stat-2-extra-01.svg" alt=""></div>
-            </div>
-            <p class="stat-content" style="display: block;">Movie Screenings A Year</p>
+            </div> -->
+            <p class="stat-content" style="display: block;">Events</p>
         </div>
         <div class="stats-grid-box anim-in-view" id="sgb-3">
-            <div class="stat-inside-main"><img src="./images/stats-grid/stat-3.svg" alt=""></div>
-            <div class="stats-extras-wrapper">
+            <div class="stat-inside-main"><img src="media/numbers/workshop.svg" alt=""></div>
+<!--             <div class="stats-extras-wrapper">
                 <div class="stats-extra" id="se3-1"><img src="./images/stats-grid/stat-3-extra-01.svg" alt=""></div>
                 <div class="stats-extra" id="se3-2"><img src="./images/stats-grid/stat-3-extra-02.svg" alt=""></div>
             </div>
-            <p class="stat-content" style="display: block;">Filmy Dialogues a Week</p>
+ -->            <p class="stat-content" style="display: block;">Workshops</p>
         </div>
 <!--    </div>
     <div class="stats-grid-row" id="sg-row-2"> -->
         <div class="stats-grid-box anim-in-view" id="sgb-4">
-            <div class="stat-inside-main"><img src="./images/stats-grid/stat-4.svg" alt=""></div>
-            <div class="stats-extras-wrapper">
+            <div class="stat-inside-main"><img src="media/numbers/seminars.svg" alt=""></div>
+<!--             <div class="stats-extras-wrapper">
                 <div class="stats-extra" id="se4-1"><img src="./images/stats-grid/stat-4-extra-01.svg" alt=""></div>
                 <div class="stats-extra" id="se4-2"><img src="./images/stats-grid/stat-4-extra-02.svg" alt=""></div>
             </div>
-            <p class="stat-content" style="display: block;">Songs Sung A week</p>
+ -->            <p class="stat-content" style="display: block;">Seminars</p>
         </div>
         <div class="stats-grid-box anim-in-view" id="sgb-5">
-            <div class="stat-inside-main"><img src="./images/stats-grid/stat-5.svg" alt=""></div>
-            <div class="stats-extras-wrapper">
+            <div class="stat-inside-main"><img src="media/numbers/GM.svg" alt=""></div>
+<!--             <div class="stats-extras-wrapper">
                 <div class="stats-extra" id="se5-1"><img src="./images/stats-grid/stat-5-extra-01.svg" alt=""></div>
                 <div class="stats-extra" id="se5-2"><img src="./images/stats-grid/stat-5-extra-02.svg" alt=""></div>
             </div>
-            <p class="stat-content" style="display: block;">Musicians in our Office</p>
+ -->            <p class="stat-content" style="display: block;">General Members</p>
         </div>
         <div class="stats-grid-box anim-in-view" id="sgb-6">
-            <div class="stat-inside-main"><img src="./images/stats-grid/stat-6.svg" alt=""></div>
-            <div class="stats-extras-wrapper">
+            <div class="stat-inside-main"><img src="media/numbers/projects.svg" alt=""></div>
+<!--             <div class="stats-extras-wrapper">
                 <div class="stats-extra" id="se6-1"><img src="./images/stats-grid/stat-6-extra-01.svg" alt=""></div>
             </div>
-            <p class="stat-content" style="display: block;">Parties a year</p>
+ -->            <p class="stat-content" style="display: block;">Live Projects</p>
         </div>
     </div>
-    <div class="stats-bms-band">
-        <div class="bms-btn stats-band-btn faux-about-us"><a href="http://in.bookmyshow.com/aboutus?aboutus" target="_blank">About Us</a></div>
-        <p>BookMyShow is India's largest online booking portal for movies, sports, events and theatre.</p>
-        <div class="bms-btn stats-band-btn real-about-us"><a href="http://in.bookmyshow.com/aboutus?aboutus" target="_blank">About Us</a></div>
-        <div class="bms-btn stats-band-btn modal-gallery"><a href="" data-toggle="modal" data-target=".images-list-modal">See Photos</a></div>
+    <div id="customize" class="outer_customize">
+        <h2><a onclick="opend()" href="javascript:void(0);"><span id="icodir" class="dispview up"></span><span id="label"></span></a></h2>
     </div>
-</div>
-    <h1>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque dolor magni dolore hic tenetur nemo deleniti quibusdam! Consequuntur magnam adipisci sunt enim accusamus possimus culpa, in, voluptas porro, quis debitis.</h1>
 </body>
 <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="/js/main.js" type="text/javascript" charset="utf-8"></script>
 
 </html>

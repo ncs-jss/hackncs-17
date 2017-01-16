@@ -70,3 +70,53 @@
     background-size: cover;
     background-position: center;
 }
+.outer_customize{
+        background: #000;
+        height: 25px;
+        width: 100%;
+        position:absolute;
+    z-index:1000;
+    bottom: 0px;
+        left: 0px;
+        padding: 12px 0 25px 23px;
+        -webkit-transition-duration: 300ms;
+        -webkit-transition-property: height;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-duration: 300ms;
+        -moz-transition-property: height;
+        -moz-transition-timing-function: ease;
+        -o-transition-duration: 300ms;
+        -o-transition-property: height;
+        -o-transition-timing-function: ease;
+    }
+    .outer_customize h2{
+        color: #fff;
+        font-size: 11px;
+        line-height: 25px;
+    }
+    .outer_customize h2 a{
+        color: #fff;
+    }
+    .outer_customize .dispview{
+        background-repeat: no-repeat;
+        background-color: red;
+        background-position: right top;
+        height: 24px;
+        width: 29px;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        cursor: pointer;
+        -webkit-transition-duration: 200ms;
+        -webkit-transition-property: background-position;
+        -webkit-transition-timing-function: ease;
+        -moz-transition-duration: 200ms;
+        -moz-transition-property: background-position;
+        -moz-transition-timing-function: ease;
+        -o-transition-duration: 200ms;
+        -o-transition-property: background-position;
+        -o-transition-timing-function: ease;
+    }
+    .outer_customize .up{
+        background-position: left top;
+    }

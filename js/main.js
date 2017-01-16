@@ -1,6 +1,5 @@
-// $(window).load(function() {
-// window.onload = function(){
-document.addEventListener("load", function(event) {
+// document.addEventListener("load", function(event) {
+$(window).bind("load", function() {
     console.log('test');
 $(document).ready(function(){
     $("#main-body").removeClass("unloaded");
@@ -29,4 +28,27 @@ $(document).ready(function(){
     setInterval(changeText,4000);
     setInterval(changeImg,4000);
 })
+var el = document.getElementById("customize");
+var ic = document.getElementById('icodir');
+var lb = document.getElementById('label');
+lb.innerHTML = 'Open panel';
+setTimeout('opend()',500);
+function opend(){
+    var b = '';
+    var max = 200;
+    var a = el.clientHeight;
+    if(a>=max){
+        b = '25px';
+        setTimeout('addCla("dispview up","Open panel")',100);
+    }else{
+        b = '200px';
+        setTimeout('addCla("dispview","Close panel")',100);
+    }
+
+    el.style.height = b;
+}
+function addCla(pass1,pass2){
+    ic.className = pass1;
+    lb.innerHTML = pass2;
+}
 });
