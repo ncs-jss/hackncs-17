@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="449" height="289" viewBox="0 0 449 289">
+  <defs>
+    <style>
+      @font-face {
+        font-family: "BigNoodleTitling";
+        src: url(/fonts/big_noodle_titling.ttf);
+      }
+      .cls-1, .cls-2 {
+        font-size: 168px;
+      }
+
+      .cls-2 {
+        fill: #c0575e;
+        font-family: "BigNoodleTitling";
+      }
+    </style>
+  </defs>
+  <text x="99" y="203" class="cls-1"><tspan class="cls-2">6500</tspan></text>
+</svg>
