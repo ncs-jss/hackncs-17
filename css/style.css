@@ -2375,11 +2375,11 @@ g#wheel_2_ {
 }
 
 .toi-text:after {
-  content: "We Are The Nibble Computer Society";
+  content: "We Are The Nibblites!";
   position: absolute;
   font-size: 45px;
   left: 50%;
-  margin-left: -199px;
+  margin-left: -110px;
   margin-bottom: 45px;
   font-family: Blanch Condensed;
   bottom: -3px
