@@ -1,0 +1,22 @@
+.images-list img{
+  display: none;
+}
+.images-list img.visible{
+  display: block;
+}
+.toi-text{
+  /*display: none;*/
+}
+.toi-text.visible{
+  display: block !important;
+}
+#main-body.unloaded{
+    height: 100vh;
+    overflow: hidden;
+}
+.preloader-wrapper.visible{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+}
