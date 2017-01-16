@@ -6,6 +6,7 @@ import subprocess
 cmds = [
     "git add .",
     "git commit -m ",
+    "git pull",
     "git push origin master"
 ]
 print("Enter a commit message or $ for manual git")

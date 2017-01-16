@@ -30,7 +30,7 @@
     position: fixed;
     top: 20px;
     right: 30px;
-    z-index: 2;
+    z-index: 1300;
 }
 
 .hamburger {}
@@ -44,17 +44,17 @@
     transition: 0.4s;
 }
 
-.hamburger:hover .b1 {
+.hamburger.closed .b1 {
     transform: rotate(45deg);
     position: absolute;
-    top: 20px;
+    top: 13px;
 }
 
-.hamburger:hover .b3 {
+.hamburger.closed .b3 {
     transform: rotate(-45deg);
 }
 
-.hamburger:hover .b2 {
+.hamburger.closed .b2 {
     opacity: 0;
 }
 
@@ -69,4 +69,11 @@
     /* background: #000; */
     background-size: cover;
     background-position: center;
+}
+#menuModal .modal-dialog{
+    width: 100%;
+    height: 600px;
+}
+#menuModal .modal-content {
+     background-color: transparent; 
 }
