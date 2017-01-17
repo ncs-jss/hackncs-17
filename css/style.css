@@ -2796,7 +2796,7 @@ p.testimonial-designation {
   display: table
 }
 
-.stats-grid-box .stat-inside-main img {
+.stats-grid-box .stat-inside-main .img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2905,11 +2905,11 @@ p.testimonial-designation {
   vertical-align: middle
 }
 
-.stats-grid-box .stat-inside-main img {
+.stats-grid-box .stat-inside-main .img {
   visibility: hidden
 }
 
-.anim-in-view .stat-inside-main img {
+.anim-in-view .stat-inside-main .img {
   visibility: visible;
   -webkit-animation: number-bounce 2s linear both;
   -moz-animation: number-bounce 2s linear both;
@@ -4753,7 +4753,7 @@ p.testimonial-designation {
   visibility: visible
 }
 
-.bms-mobile .stats-grid-wrapper .stat-inside-main img {
+.bms-mobile .stats-grid-wrapper .stat-inside-main .img {
   visibility: visible;
   position: relative
 }
