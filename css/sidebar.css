@@ -1,3 +1,19 @@
+@font-face {
+    font-family: Blanch Caps;
+    src: url(../fonts/blanch/BLANCH_CAPS.eot);
+    src: url(../fonts/blanch/BLANCH_CAPS.eot?#iefix) format("embedded-opentype"), url(../fonts/blanch/BLANCH_CAPS.woff) format("woff"), url(../fonts/blanch/BLANCH_CAPS.ttf) format("truetype"), url("../fonts/blanch/BLANCH_CAPS.svg#Blanch Caps") format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Blanch Condensed;
+    src: url(../fonts/blanch/BLANCH_CONDENSED.eot);
+    src: url(../fonts/blanch/BLANCH_CONDENSED.eot?#iefix) format("embedded-opentype"), url(../fonts/blanch/BLANCH_CONDENSED.woff) format("woff"), url(../fonts/blanch/BLANCH_CONDENSED.ttf) format("truetype"), url("../fonts/blanch/BLANCH_CONDENSED.svg#Blanch Condensed") format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
 .float-menu {
     position: fixed;
     top: 40px;

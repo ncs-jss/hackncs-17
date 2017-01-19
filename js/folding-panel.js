@@ -12,6 +12,13 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         toggleContent('', false);
     });
+    $(document).on('keydown', function(event) {
+        event.preventDefault();
+        console.log(event.keyCode);
+        if (event.keyCode === 27) {
+            toggleContent('', false);
+        }
+    });
     gallery.on('click', function(event) {
         /* detect click on .cd-gallery::before when the .cd-folding-panel is open */
         if ($(event.target).is('.cd-gallery') && $('.fold-is-open').length > 0) toggleContent('', false);
