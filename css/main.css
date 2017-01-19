@@ -14,8 +14,11 @@
     display: block !important;
 }
 
-#main-body.unloaded {
+#main-body {
     height: 100vh;
+}
+
+#main-body.unloaded {
     overflow: hidden;
 }
 
@@ -84,4 +87,9 @@ footer {
     -o-transition-duration: 200ms;
     -o-transition-property: background-position;
     -o-transition-timing-function: ease;
+}
+
+.projects-container p {
+    color: #555;
+    text-align: center;
 }

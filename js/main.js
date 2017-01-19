@@ -4,6 +4,17 @@ $(window).bind("load", function() {
     $(document).ready(function() {
         $("#main-body").removeClass("unloaded");
         $(".preloader-wrapper").removeClass("visible");
+        $(".image-gallery-wrapper").addClass("loaded");
+        $.get("partials/sidebar-modal.html", function(data) {
+            $(".modal-wrapper").html(data);
+            $("#menuModal").on('show.bs.modal', function() {
+                console.log('show');
+                $(".float-menu .hamburger").addClass("closed");
+            });
+            $("#menuModal").on('hide.bs.modal', function() {
+                $(".float-menu .hamburger").removeClass("closed");
+            });
+        });
         var textFields = $(".toi-text");
         var imgFields = $(".images-list img");
         if (imgFields.length > 0 && textFields.length > 0) {
@@ -16,6 +27,7 @@ $(window).bind("load", function() {
             $.each(textFields, function(key, value) {
                 value.dataset.index = key;
             });
+
             function changeImg() {
                 imgFields[activeImg].classList.remove("visible");
                 activeImg = (activeImg + 1) % len;
@@ -30,12 +42,5 @@ $(window).bind("load", function() {
             setInterval(changeText, 4000);
             setInterval(changeImg, 4000);
         }
-        $("#menuModal").on('show.bs.modal', function() {
-            console.log('test');
-            $(".float-menu .hamburger").addClass("closed");
-        });
-        $("#menuModal").on('hide.bs.modal', function() {
-            $(".float-menu .hamburger").removeClass("closed");
-        });
     })
 });
