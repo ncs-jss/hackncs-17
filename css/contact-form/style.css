@@ -24,6 +24,18 @@ a {
   color: #2c97de;
   text-decoration: none;
 }
+@font-face {
+    font-family: Blanch Caps;
+    src: url(../fonts/blanch/BLANCH_CAPS.eot);
+    src: url(../fonts/blanch/BLANCH_CAPS.eot?#iefix) format("embedded-opentype"), url(../fonts/blanch/BLANCH_CAPS.woff) format("woff"), url(../fonts/blanch/BLANCH_CAPS.ttf) format("truetype"), url("../fonts/blanch/BLANCH_CAPS.svg#Blanch Caps") format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+legend {
+  font-family: Blanch Caps;
+  font-size: 50px !important; 
+}
 
 /* -------------------------------- 
 
@@ -61,6 +73,8 @@ Form
 }
 .cd-form .cd-label {
   display: block;
+  font-family: Blanch Caps;
+  font-size: 26px !important;
 }
 .cd-form input, .cd-form textarea, .cd-form select, .cd-form label {
   font-family: "Open Sans", sans-serif;
