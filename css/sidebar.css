@@ -1,0 +1,51 @@
+.float-menu {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 1300;
+}
+
+.hamburger {}
+
+.bar {
+    height: 5px;
+    width: 32px;
+    background: #fff;
+    margin-bottom: 7px;
+    border-radius: 84px;
+    transition: 0.4s;
+}
+
+.hamburger.closed .b1 {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 13px;
+}
+
+.hamburger.closed .b3 {
+    transform: rotate(-45deg);
+}
+
+.hamburger.closed .b2 {
+    opacity: 0;
+}
+
+#menuModal .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#menuModal .modal-content {
+    background-color: transparent;
+}
+.line-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.jc-title-wrapper h2{
+    font-family: Blanch Caps;
+    font-size: 100px;
+}
+#job-listing-wrapper {
+    background-color: rgba(32, 32, 47, 0.91);
+}
