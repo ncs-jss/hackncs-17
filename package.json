@@ -1,0 +1,26 @@
+{
+  "name": "-hack-ncs16",
+  "version": "1.0.0",
+  "description": "Ncs Website for 2016",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncs-jss/-hack-ncs16.git"
+  },
+  "author": "Team Ncs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ncs-jss/-hack-ncs16/issues"
+  },
+  "homepage": "https://github.com/ncs-jss/-hack-ncs16#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "multer": "^1.2.0",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.23.6"
+  }
+}
