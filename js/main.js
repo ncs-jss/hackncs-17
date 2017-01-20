@@ -21,23 +21,18 @@ $(window).bind("load", function() {
             var activeImg = 0;
             var activeText = 0;
             var len = textFields.length;
-            $.each(imgFields, function(key, value) {
-                value.dataset.index = key;
-            });
-            $.each(textFields, function(key, value) {
-                value.dataset.index = key;
-            });
+            console.log($(imgFields[activeImg]));
 
             function changeImg() {
-                imgFields[activeImg].classList.remove("visible");
+                $(imgFields[activeImg]).removeClass("visible");
                 activeImg = (activeImg + 1) % len;
-                imgFields[activeImg].classList.add("visible");
+                $(imgFields[activeImg]).addClass("visible");
             }
 
             function changeText() {
-                textFields[activeText].classList.remove("visible");
+                $(textFields[activeText]).removeClass("visible");
                 activeText = (activeText + 1) % len;
-                textFields[activeText].classList.add("visible");
+                $(textFields[activeText]).addClass("visible");
             }
             setInterval(changeText, 4000);
             setInterval(changeImg, 4000);
