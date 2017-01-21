@@ -83,7 +83,15 @@ app.get('/events', function(req,res) {
 
 app.get('/registration',function(req,res) {
 	res.sendFile('/register.html',{root : './public'});
+});
+
+
+app.get('/team',function(req,res) {
+	res.sendFile('/team.html',{root : './public'});
 })
+
+
+
 
 app.get('/getevents', function(req,res){
 	Event.find().then(function(err,result){
