@@ -1,11 +1,22 @@
 
 var express	=	require("express");
 var app		=	express();
+
+//var express = require('express');
+//var session = require('express-session');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+
+
 var Sequelize	= require("sequelize");
-var bodyParser  = require("body-parser");
+//var bodyParser  = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, '/public')));
 
 var sequelize = new Sequelize('ncsdb','root','root',
 {
@@ -33,6 +44,21 @@ sequelize.sync();
 var Student	=	sequelize.import('./models/student.model.js');
 var Event 	= sequelize.import('./models/event.model.js');
 
+
+app.get('/contact', function(req,res) {
+	res.sendFile('/contact.html',{root : './public'});
+});
+
+app.get('/clubs', function(req,res) {
+	res.sendFile('/clubs.html',{root : './public'});
+});
+
+
+app.get('/contri', function(req,res) {
+	res.sendFile('/contri.html',{root : './public'});
+});
+
+
 app.post('/studentRegister',function(req,res){
 	var email = req.body.email;
 	var contactNo = req.body.number;
@@ -51,11 +77,20 @@ app.post('/studentRegister',function(req,res){
 
 });
 
-app.get('/events', function(req,res){
+app.get('/events', function(req,res) {
+	res.sendFile('/events.html',{root : './public'});
+});
+
+app.get('/registration',function(req,res) {
+	res.sendFile('/register.html',{root : './public'});
+})
+
+app.get('/getevents', function(req,res){
 	Event.find().then(function(err,result){
 		res.send(result);
 
-	})
+	});
+
 });
 
 app.post("/event",function  (req,res) {
@@ -101,7 +136,7 @@ app.get('/event',function(req,res){
   
 app.get('/',function(req,res){
 	console.log(__dirname+'/public');
-	res.sendFile('/index2.html' , { root : __dirname+'\\public'});
+	res.sendFile('/index.html' , { root : __dirname+'\\public'});
 })
 
 
