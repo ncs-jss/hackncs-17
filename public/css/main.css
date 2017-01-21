@@ -15,22 +15,21 @@
 }
 
 #main-body {
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 #main-body.unloaded {
     overflow: hidden;
 }
-.job-type-wrapper p{
-    @font-face {
-    font-family: Blanch Caps;
-    src: url(../fonts/blanch/BLANCH_CAPS.eot);
-    src: url(../fonts/blanch/BLANCH_CAPS.eot?#iefix) format("embedded-opentype"), url(../fonts/blanch/BLANCH_CAPS.woff) format("woff"), url(../fonts/blanch/BLANCH_CAPS.ttf) format("truetype"), url("../fonts/blanch/BLANCH_CAPS.svg#Blanch Caps") format("svg");
-    font-weight: 400;
-    font-style: normal
-}
 
-    
+.job-type-wrapper p {
+    @font-face {
+        font-family: Blanch Caps;
+        src: url(../fonts/blanch/BLANCH_CAPS.eot);
+        src: url(../fonts/blanch/BLANCH_CAPS.eot?#iefix) format("embedded-opentype"), url(../fonts/blanch/BLANCH_CAPS.woff) format("woff"), url(../fonts/blanch/BLANCH_CAPS.ttf) format("truetype"), url("../fonts/blanch/BLANCH_CAPS.svg#Blanch Caps") format("svg");
+        font-weight: 400;
+        font-style: normal
+    }
 }
 
 .preloader-wrapper.visible {
@@ -51,6 +50,16 @@
     /* background: #000; */
     background-size: cover;
     background-position: center;
+}
+
+.arrow-wrapper {
+    position: absolute;
+    /*height: 100px;*/
+    /*width: 215px;*/
+    bottom: 45px;
+    left: 50%;
+    margin-left: -20px;
+    z-index: 24;
 }
 
 footer {
@@ -103,4 +112,8 @@ footer {
 .projects-container p {
     color: #555;
     text-align: center;
+}
+
+.cd-vertical-nav li {
+    list-style: none;
 }

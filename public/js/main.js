@@ -37,5 +37,12 @@ $(window).bind("load", function() {
             setInterval(changeText, 4000);
             setInterval(changeImg, 4000);
         }
+        var arrow = $(".arrow-wrapper");
+        if (arrow) {
+            arrow.on("click", function() {
+                var toScroll = $(".first-section").height();
+                $(window).scrollTop(toScroll);
+            })
+        }
     })
 });
