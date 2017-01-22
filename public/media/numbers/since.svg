@@ -10,7 +10,7 @@
       }
 
       .cls-2 {
-        fill: #c0575e;
+        fill: #fff;
         font-family: "BigNoodleTitling";
       }
     </style>
