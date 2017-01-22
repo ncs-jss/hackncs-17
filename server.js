@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/public')));
-<<<<<<< HEAD
+
 
 var sequelize = new Sequelize('ncsdb','root','root',
 {
@@ -25,16 +25,7 @@ var sequelize = new Sequelize('ncsdb','root','root',
 		min: 0,
 		idle: 1000
 	},
-=======
-var sequelize = new Sequelize('ncsdb', 'root', 'root', {
-    host: 'localhost',
-    dialect: 'mysql',
-    pool: {
-        max: 100,
-        min: 0,
-        idle: 1000
-    },
->>>>>>> 53a493ffc9d2eb94c81f133e2826ce6b57878e79
+
 });
 sequelize.authenticate().then(function(err) {
     console.log("connection established");
