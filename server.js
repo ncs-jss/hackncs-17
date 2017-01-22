@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 var sequelize = new Sequelize('ncsdb','root','root',
 {
-	host: 'localhost',
+	host: '210.212.85.15',
 	dialect: 'mysql',
 	pool: {
 		max: 100,
