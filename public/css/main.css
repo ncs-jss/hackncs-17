@@ -1,3 +1,11 @@
+.arrow-wrapper {
+    position: fixed;
+    bottom: 45px;
+    margin-left: -20px;
+    z-index: 24;
+    right: 30px;
+}
+
 .images-list img {
     display: none;
 }
@@ -50,16 +58,6 @@
     /* background: #000; */
     background-size: cover;
     background-position: center;
-}
-
-.arrow-wrapper {
-    position: absolute;
-    /*height: 100px;*/
-    /*width: 215px;*/
-    bottom: 45px;
-    left: 50%;
-    margin-left: -20px;
-    z-index: 24;
 }
 
 footer {

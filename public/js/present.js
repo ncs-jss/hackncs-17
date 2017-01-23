@@ -111,6 +111,13 @@ jQuery(document).ready(function($) {
         var visibleSlide = slides.filter('.visible'),
             marginSlide = (visibleSlide.find('.cd-slider-content').length > 0) ? Number(visibleSlide.find('.cd-slider-content').eq(0).css('margin-bottom').replace('px', '')) * 3 : 0,
             actualTranslate = getTranslateValue(slideshow.get(0), 'Y');
+        // console.log(slides.last());
+        var arrow = $(".arrow-wrapper");
+        if (slides.last().hasClass('visible')) {
+            arrow.css("opacity", 0)
+        } else {
+            arrow.css("opacity", 1)
+        }
         if (string == 'nav') {
             /* we have choosen a new slide from the navigation */
             var newSlide = slide;

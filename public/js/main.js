@@ -41,8 +41,20 @@ $(window).bind("load", function() {
         if (arrow) {
             arrow.on("click", function() {
                 var toScroll = $(".first-section").height();
-                $(window).scrollTop(toScroll);
+                // $(window).scrollTop(toScroll);
             })
         }
+        // $(window).scroll(function() {
+        $(window).on('scroll', function() {
+            // $(window).on('DOMMouseScroll mousewheel', function() {
+            var threshold = 200; // number of pixels before bottom of page that you want to start fading
+            var op = (($(document).height() - $(window).height()) - $(window).scrollTop()) / threshold;
+            if (op <= 0) {
+                arrow.hide();
+            } else {
+                arrow.show();
+            }
+            arrow.css("opacity", op);
+        });
     })
 });
