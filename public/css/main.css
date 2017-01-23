@@ -115,3 +115,28 @@ footer {
 .cd-vertical-nav li {
     list-style: none;
 }
+.hh1{
+    font-size: 75px;
+    padding-bottom: 31px;
+    padding-top: 20px;
+
+}
+.Upevents .img{
+    padding-left: 346px;
+}
+.content {
+    position: relative;
+    margin-bottom: -200px;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+.push, footer {
+  height: 200px;
+}
+footer {
+  background: #2c3e50;
+}
+footer img{
+    height: 107%;
+}
