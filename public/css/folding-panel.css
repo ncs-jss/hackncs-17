@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-family: "Open Sans", sans-serif;
     color: #363558;
     background-color: #1c1726;
@@ -26,8 +26,8 @@ a {
 
 h1, h2 {
     font-family: "Blanch Caps", serif;
+    font-size: 70px;
 }
-
 
 /* -------------------------------- 
 
@@ -639,6 +639,7 @@ folding panel
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
+    padding-bottom: 17px;
 }
 
 .is-open .cd-fold-content h2 {
