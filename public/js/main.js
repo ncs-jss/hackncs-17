@@ -56,5 +56,8 @@ $(window).bind("load", function() {
             }
             arrow.css("opacity", op);
         });
+        $('#full-page').fullpage({
+            touchSensitivity: 1000
+        });
     })
 });
