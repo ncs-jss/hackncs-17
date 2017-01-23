@@ -1,5 +1,13 @@
 var express = require("express");
 var app = express();
+var dbConfig = require('./config.js')()|| {
+		dbName : 'ncsdb',
+		dbUserName : 'root',
+		dbPassword : 'root',
+		host : 'localhost'
+	}
+	//console.log("Value of dbCOnfig is "+dbConfig.dbUserName);
+	// body...
 //var express = require('express');
 //var session = require('express-session');
 var path = require('path');
@@ -14,20 +22,27 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/public')));
-var sequelize = new Sequelize('ncsdb', 'root', 'root', {
-    host: 'localhost',
-    dialect: 'mysql',
-    pool: {
-        max: 100,
-        min: 0,
-        idle: 1000
-    },
+
+
+var sequelize = new Sequelize(dbConfig.dbName, dbConfig.dbUserName, dbConfig.dbPassword,
+
+{
+	host: dbConfig.host,
+	//port : '3306',
+	dialect: 'mysql',
+	pool: {
+		max: 100,
+		min: 0,
+		idle: 1000
+	},
+
 });
 sequelize.authenticate().then(function(err) {
     console.log("connection established");
 }).catch(function(err) {
     console.log("Unable to connect to database" + err);
 });
+
 sequelize.sync();
 var Student = sequelize.import('./models/student.model.js');
 var Event = sequelize.import('./models/event.model.js');
