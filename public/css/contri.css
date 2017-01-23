@@ -5,11 +5,8 @@
 }
 
 .cd-slideshow>li .content-wrapper {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(http://hackncs.com/img/portfolio-03.jpeg) !important;
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(http://hackncs.com/img/portfolio-03.jpeg) !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(http://hackncs.com/img/portfolio-03.jpeg) !important;
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(http://hackncs.com/img/portfolio-03.jpeg) !important;*/
 }
-
 
 /*:nth-of-type(1)*/
 
