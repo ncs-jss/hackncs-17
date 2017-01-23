@@ -283,8 +283,9 @@ Slide Content
         visibility: hidden;
     }
     .cd-slider-content h2 {
-        font-size: 4rem;
         font-weight: 300;
+        font-family: Blanch Caps;
+        font-size: 100px;
     }
     .cd-slider-content p {
         font-weight: bold;
