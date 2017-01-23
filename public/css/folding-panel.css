@@ -39,9 +39,11 @@ Patterns - reusable parts of our design
     overflow: hidden;
 }
 
-a{
+a {
     text-decoration: none !important;
 }
+
+
 /* -------------------------------- 
 
 Header
@@ -183,6 +185,9 @@ Main content
     -moz-transition: -moz-transform 0.5s 0.4s;
     transition: transform 0.5s 0.4s;
     overflow: hidden;
+    background-size: cover;
+    background-position: center 0;
+    transition: 1s;
 }
 
 .cd-item>a {
@@ -206,27 +211,35 @@ Main content
 .cd-item div {
     display: table-cell;
     vertical-align: middle;
+    opacity: 0;
+    transition: 1s;
+}
+
+.cd-item:hover {
+    /*background: rgba(0, 0, 0, 0.7) !important;*/
+}
+
+.cd-item:hover div {
+    opacity: 1;
+}
+
+.cd-item:hover h2 {
+    background: rgba(0, 0, 0, 0.7) !important;
 }
 
 .cd-item:nth-of-type(1) {
     /*background-color: #363558;*/
-    background-image: linear-gradient(rgba(0,0,0, 0.5),rgba(0,0,0, 0.5)),url(../media/events/tech_trek.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/tech_trek.jpg);
 }
 
 .cd-item:nth-of-type(2) {
     /*background-color: #544173;*/
-    background-image: linear-gradient(rgba(0,0,0, 0.5),rgba(0,0,0, 0.5)),url(../media/events/op.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/op.jpg);
 }
 
 .cd-item:nth-of-type(3) {
     /*background-color: #dadcdc;*/
-    background-image: linear-gradient(rgba(0,0,0, 0.5),rgba(0,0,0, 0.5)),url(../media/events/c.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/c.jpg);
 }
 
 .cd-item:nth-of-type(4) {
@@ -235,6 +248,7 @@ Main content
 
 .cd-item h2 {
     font-size: 2.2rem;
+    transition: 1s;
 }
 
 .cd-item p {
