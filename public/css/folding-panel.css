@@ -130,6 +130,7 @@ Main content
 
 .cd-gallery {
     padding: 0;
+    margin: 0;
 }
 
 .cd-gallery::after {
@@ -179,6 +180,7 @@ Main content
     -webkit-transition: -webkit-transform 0.5s 0.4s;
     -moz-transition: -moz-transform 0.5s 0.4s;
     transition: transform 0.5s 0.4s;
+    overflow: hidden;
 }
 
 .cd-item>a {

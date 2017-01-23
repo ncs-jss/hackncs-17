@@ -9,6 +9,13 @@
         <link href="/css/present.css" rel="stylesheet" type="text/css"/>
         <link href="/css/contri.css" rel="stylesheet" type="text/css"/>
         <link href="/css/sidebar.css" rel="stylesheet" type="text/css"/>
+        <style type="text/css">
+            .arrow-wrapper {
+                position: absolute;
+                left: 50%;
+                right: initial;
+            }
+        </style>
     </head>
     <body id="main-body" class="unloaded">
         <div class="float-menu" data-toggle="modal" data-target="#menuModal">
@@ -17,6 +24,9 @@
                 <div class="bar b2"></div>
                 <div class="bar b3"></div>
             </div>
+        </div>
+        <div class="arrow-wrapper animated slideInDown infinite">
+            <img src="/media/cd-icon-arrow.svg" alt="arrow"/>
         </div>
         <!-- ... -->
         <div class="cd-slideshow-wrapper">
@@ -57,7 +67,7 @@
     </body>
     <script src="/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/main.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/present.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/contri.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/main.js" type="text/javascript" charset="utf-8"></script>
 </html>
