@@ -4,7 +4,7 @@ var dbConfig = require('./config.js')()|| {
 		dbName : 'ncsdb',
 		dbUserName : 'root',
 		dbPassword : 'root',
-		port : 'localhost'
+		host : 'localhost'
 	}
 	//console.log("Value of dbCOnfig is "+dbConfig.dbUserName);
 	// body...
