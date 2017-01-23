@@ -2305,7 +2305,9 @@ p.testimonial-designation {
     text-align: center;
     bottom: 5%;
     font-size: 14px;
-    font-weight: 600
+    font-weight: 600;
+    font-size: 28px;
+    font-family: Blanch Caps;
 }
 
 .stats-extras-wrapper {
@@ -2323,55 +2325,56 @@ p.testimonial-designation {
 }
 
 .stats-extra img {
-    width: 100%
+    width: 100%;
 }
 
 #sgb-1 {
-    background: #d0ac32
+    background: #d0ac32;
 }
 
 #sgb-1 .stat-content {
-    color: #c0575e;
+    color: #2c3e50;
+    ;
 }
 
 #sgb-2 {
-    background: #2c3e50
+    background: #2c3e50;
 }
 
 #sgb-2 .stat-content {
-    color: #989d9a
+    color: #fff;
 }
 
 #sgb-3 {
-    background: #d0ac32
+    background: #d0ac32;
 }
 
 #sgb-3 .stat-content {
-    color: #c0575e;
+    color: #2c3e50;
 }
 
 #sgb-4 {
-    background: #2c3e50
+    background: #2c3e50;
 }
 
 #sgb-4 .stat-content {
-    color: #989d9a
+    color: #fff;
 }
 
 #sgb-5 {
-    background: #d0ac32
+    background: #d0ac32;
 }
 
 #sgb-5 .stat-content {
-    color: #c0575e;
+    color: #2c3e50;
 }
 
 #sgb-6 {
-    background: #2c3e50
+    background: #2c3e50;
 }
 
 #sgb-6 .stat-content {
-    color: #989d9a
+    color: #fff;
 }
 
 .stats-bms-band {
