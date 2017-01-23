@@ -14,7 +14,6 @@ jQuery(document).ready(function($) {
     });
     $(document).on('keydown', function(event) {
         event.preventDefault();
-        console.log(event.keyCode);
         if (event.keyCode === 27) {
             toggleContent('', false);
         }
@@ -51,7 +50,9 @@ jQuery(document).ready(function($) {
             var foldingContent = foldingPanel.find('.cd-fold-content');
             foldingContent.load(url + ' .cd-fold-content > *', function(data) {
                 data = $.parseJSON(data);
-                $(".cd-fold-content").html(data.desc);
+                console.log(data);
+                var htmlStr = '<img class="img-responsive" src="' + data.image + '"><h1>' + data.title + '</h1><p>' + data.desc + '</p>';
+                $(".cd-fold-content").html(htmlStr);
                 setTimeout(function() {
                     $('body').addClass('overflow-hidden');
                     foldingPanel.addClass('is-open');
