@@ -17,12 +17,9 @@
 .float-menu {
     position: fixed;
     top: 40px;
-    /*right: 30px;*/
     left: 30px;
     z-index: 1300;
 }
-
-.hamburger {}
 
 .bar {
     height: 4px;

@@ -5,6 +5,9 @@ $(window).bind("load", function() {
         $("#main-body").removeClass("unloaded");
         $(".preloader-wrapper").removeClass("visible");
         $(".image-gallery-wrapper").addClass("loaded");
+        $(".back-button").on("click", function() {
+            window.history.back();
+        })
         $.get("partials/sidebar-modal.html", function(data) {
             $(".modal-wrapper").html(data);
             $("#menuModal").on('show.bs.modal', function() {
@@ -21,7 +24,6 @@ $(window).bind("load", function() {
             var activeImg = 0;
             var activeText = 0;
             var len = textFields.length;
-            console.log($(imgFields[activeImg]));
 
             function changeImg() {
                 $(imgFields[activeImg]).removeClass("visible");

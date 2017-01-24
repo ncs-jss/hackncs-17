@@ -71,7 +71,7 @@ input[type="submit"]:hover {
 ::-webkit-input-placeholder {
     color: #aaa;
     color: rgba(255, 255, 255, 0.1);
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .animated {
@@ -107,7 +107,7 @@ h2 {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.container {
+.form-container {
     max-width: 320px;
     margin: 0 auto;
     /*padding: 20px 16px 40px 16px;*/
