@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "BigNoodleTitling";
+    src: url(/fonts/big_noodle_titling.ttf);
+}
+
 .arrow-wrapper {
     position: fixed;
     bottom: 45px;
@@ -30,14 +35,14 @@
     overflow: hidden;
 }
 
-.job-type-wrapper p {
-    @font-face {
-        font-family: Blanch Caps;
-        src: url(../fonts/blanch/BLANCH_CAPS.eot);
-        src: url(../fonts/blanch/BLANCH_CAPS.eot?#iefix) format("embedded-opentype"), url(../fonts/blanch/BLANCH_CAPS.woff) format("woff"), url(../fonts/blanch/BLANCH_CAPS.ttf) format("truetype"), url("../fonts/blanch/BLANCH_CAPS.svg#Blanch Caps") format("svg");
-        font-weight: 400;
-        font-style: normal
-    }
+.job-type-wrapper p {}
+
+@font-face {
+    font-family: Blanch Caps;
+    src: url(../fonts/blanch/BLANCH_CAPS.eot);
+    src: url(../fonts/blanch/BLANCH_CAPS.eot?#iefix) format("embedded-opentype"), url(../fonts/blanch/BLANCH_CAPS.woff) format("woff"), url(../fonts/blanch/BLANCH_CAPS.ttf) format("truetype"), url("../fonts/blanch/BLANCH_CAPS.svg#Blanch Caps") format("svg");
+    font-weight: 400;
+    font-style: normal
 }
 
 .preloader-wrapper.visible {
@@ -197,4 +202,18 @@ footer img {
     height: 400px;
     width: auto;
     box-shadow: 2px 2px 20px 4px rgba(0, 0, 0, 0.4);
+}
+
+.image-gallery-wrapper {
+    min-height: 100vh;
+}
+
+.stats-grid-box .img h2 {
+    margin-top: 50px;
+    font-size: 168px;
+    font-family: "BigNoodleTitling";
+}
+
+#sgb-2 h2, #sgb-4 h2, #sgb-6 h2 {
+    color: #f1c40f;
 }
