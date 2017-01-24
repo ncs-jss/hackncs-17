@@ -56,8 +56,49 @@ $(window).bind("load", function() {
             }
             arrow.css("opacity", op);
         });
-        $('#full-page').fullpage({
-            touchSensitivity: 1000
-        });
+        // $('#full-page').fullpage();
+        var pages = $("#full-page").children(".section");
+        if (pages.length > 0) {
+            $("#full-page").onepage_scroll({
+                sectionContainer: ".section",
+                loop: true,
+                pagination: false,
+                updateURL: false,
+                beforeMove: function(index) {
+                    console.info(index);
+                    index -= 1;
+                    switch (index) {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            $(".stats-grid-box").removeClass("anim-in-view");
+                            break;
+                        case 4:
+                            // animated fadeInDown
+                            break;
+                    }
+                },
+                afterMove: function(index) {
+                    console.log(index);
+                    switch (index) {
+                        case 1:
+                            break;
+                        case 2:
+                            $(".upcoming-event-heading").addClass("animated fadeInUp");
+                            $(".upcoming-event-wrapper img").addClass("animated fadeInUp");
+                            break;
+                        case 3:
+                            $(".stats-grid-box").addClass("anim-in-view");
+                            break;
+                    }
+                }
+                // anim-in-view
+            });
+            $("#full-page").on("click", function() {
+                $("#full-page").moveDown();
+            });
+        }
     })
 });
