@@ -48,12 +48,12 @@ input[type="submit"] {
     outline: none;
     margin-top: 40px;
     color: #fff;
-    font-size: 12px;
+    font-size: 27px;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
 }
 
-input[type="submit"]:hover {
+.form:not(:invalid) input[type="submit"]:hover {
     background: #16aa56;
 }
 

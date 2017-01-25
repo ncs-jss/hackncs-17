@@ -11,6 +11,11 @@
     right: 30px;
 }
 
+.arrow-wrapper img {
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
 .images-list img {
     display: none;
 }
