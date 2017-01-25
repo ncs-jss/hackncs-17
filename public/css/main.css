@@ -92,6 +92,14 @@ footer img {
     width: 215px;
 }
 
+footer .logo-box {
+    height: 100px;
+    width: 215px;
+    background: url(/media/logo/ncsncs_logo.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .last-section {
     position: relative;
 }

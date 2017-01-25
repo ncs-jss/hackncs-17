@@ -98,7 +98,7 @@ $(window).bind("load", function() {
                 }
                 // anim-in-view
             });
-            $("#full-page").on("click", function() {
+            $(".arrow-wrapper").on("click", function() {
                 $("#full-page").moveDown();
             });
         }
