@@ -29,6 +29,7 @@ h1, h2 {
     font-size: 70px;
 }
 
+
 /* -------------------------------- 
 
 Patterns - reusable parts of our design
@@ -80,7 +81,8 @@ Main content
 -------------------------------- */
 
 .cd-main {
-    overflow-x: hidden;
+    overflow: hidden;
+    height: 100vh;
 }
 
 .cd-main::before {
@@ -227,25 +229,24 @@ Main content
     background: rgba(0, 0, 0, 0.7) !important;
 }
 
-.cd-item:nth-of-type(1) {
+.cd-item.item-1 {
     /*background-color: #363558;*/
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/tech_trek.jpg);
 }
 
-.cd-item:nth-of-type(2) {
+.cd-item.item-2 {
     /*background-color: #544173;*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/op.jpg);
-}
-
-.cd-item:nth-of-type(3) {
-    /*background-color: #dadcdc;*/
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/c.jpg);
 }
 
-.cd-item:nth-of-type(4) {
+.cd-item.item-3 {
+    /*background-color: #dadcdc;*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/op.jpg);
+}
+
+.cd-item.item-4 {
     /*background-color: #65d29b;*/
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/web.jpg);
-    
 }
 
 .cd-item h2 {

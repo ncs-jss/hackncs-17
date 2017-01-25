@@ -55,8 +55,6 @@ app.get('/contri', function(req, res) {
         root: './public'
     });
 });
-
-
 app.post('/studentRegister', function(req, res) {
     var email = req.body.email;
     var contactNo = req.body.number;
