@@ -1,15 +1,7 @@
 var express = require("express");
 var app = express();
-var dbConfig = require('./config.js')() || {
-    dbName: 'ncsdb',
-    dbUserName: 'root',
-    dbPassword: 'root',
-    host: 'localhost'
-}
-//console.log("Value of dbCOnfig is "+dbConfig.dbUserName);
-// body...
-//var express = require('express');
-//var session = require('express-session');
+var dbConfig = require('./config.js')() ;
+
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -138,6 +130,6 @@ app.get('/', function(req, res) {
         root: __dirname + '\\public'
     });
 })
-app.listen(3000, function() {
+app.listen(3000,function() {
     console.log("we are listening at port 3000\n type  http://localhost:3000/ in chrome");
 });

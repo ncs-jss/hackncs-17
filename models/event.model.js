@@ -1,15 +1,18 @@
 //model for events
 
 module.exports = function( sequelize, dataTypes) {
-  return sequelize.define( 'Event', {
+  return sequelize.define( 'events', {
     id: { type: dataTypes.INTEGER , autoIncrement:true, primaryKey: true },
-    eventName : { type : dataTypes.STRING ,allowNull : false },
-    startTime : {type : dataTypes.DATE  },
-    endTime: {type : dataTypes.DATE },
-    displayStartTime : {type : dataTypes.DATE },
-    displayEndTime : {type : dataTypes.DATE },
+    name : { type : dataTypes.STRING ,allowNull : false },
+    start_time : {type : dataTypes.DATE  },
+    end_time: {type : dataTypes.DATE },
+    display_start_time : {type : dataTypes.DATE },
+    display_end_time : {type : dataTypes.DATE },
     description : { type : dataTypes.TEXT },
-    contactInfo : {type : dataTypes.STRING },
-    venue : { type : dataTypes.STRING }
+    contact_info : {type : dataTypes.STRING },
+    venue : { type : dataTypes.STRING },
+    poster_file_name : { type : dataTypes.STRING},
+    poster_content_type : { type : dataTypes.STRING},
+    poster_updated_at : {type : dataTypes.DATE}
   });
 }

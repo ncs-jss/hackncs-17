@@ -1,6 +1,6 @@
 //models for student using DataTypes
 module.exports = function  (sequelize, DataTypes) {
-	return  sequelize.define('Student',{
+	return  sequelize.define('students',{
 			id : {type : DataTypes.INTEGER, autoIncrement : true, primaryKey : true},
 			email : { type : DataTypes.STRING , allowNull : false},
 			name : { type : DataTypes.STRING },

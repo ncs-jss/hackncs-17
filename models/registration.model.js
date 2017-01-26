@@ -1,6 +1,6 @@
 // registration model
 module.exports = function(sequelize, dataTypes) {
-    return sequelize.define('Registration', {
+    return sequelize.define('registrations', {
         id: {
             type: dataTypes.INTEGER,
             autoIncrement: true,
