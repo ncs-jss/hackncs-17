@@ -30,23 +30,29 @@ sequelize.authenticate().then(function(err) {
     console.log("Unable to connect to database" + err);
 });
 sequelize.sync();
+
 var Student = sequelize.import('./models/student.model.js');
 var Event = sequelize.import('./models/event.model.js');
+
+
 app.get('/contact', function(req, res) {
     res.sendFile('/contact.html', {
         root: './public'
     });
 });
+
 app.get('/clubs', function(req, res) {
     res.sendFile('/clubs.html', {
         root: './public'
     });
 });
+
 app.get('/contri', function(req, res) {
     res.sendFile('/contri.html', {
         root: './public'
     });
 });
+
 app.post('/studentRegister', function(req, res) {
     var email = req.body.email;
     var contactNo = req.body.number;
@@ -66,26 +72,35 @@ app.post('/studentRegister', function(req, res) {
     })
     res.send("welcome home!");
 });
+
+
 app.get('/events', function(req, res) {
     res.sendFile('/events.html', {
         root: './public'
     });
 });
+
+
 app.get('/register', function(req, res) {
     res.sendFile('/register.html', {
         root: './public'
     });
 });
+
+
 app.get('/team', function(req, res) {
     res.sendFile('/team.html', {
         root: './public'
     });
 })
+
+
 app.get('/getevents', function(req, res) {
-    Event.find().then(function(err, result) {
-        res.send(result);
-    });
+    Event.all().then(events => res.status(200).send(todos))
+    .catch(error => res.status(400).send(error));
 });
+
+
 app.post("/event", function(req, res) {
     var eventName = req.body.eventName;
     var displayStartTime = req.body.displayStartTime;
@@ -106,6 +121,8 @@ app.post("/event", function(req, res) {
         res.send("created!");
     })
 })
+
+
 app.get('/event', function(req, res) {
     Event.findAndCountAll({
         where: {

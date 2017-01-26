@@ -2,6 +2,7 @@
 
 module.exports = function( sequelize, dataTypes) {
   return sequelize.define( 'events', {
+
     id: { type: dataTypes.INTEGER , autoIncrement:true, primaryKey: true },
     name : { type : dataTypes.STRING ,allowNull : false },
     start_time : {type : dataTypes.DATE  },
@@ -14,5 +15,8 @@ module.exports = function( sequelize, dataTypes) {
     poster_file_name : { type : dataTypes.STRING},
     poster_content_type : { type : dataTypes.STRING},
     poster_updated_at : {type : dataTypes.DATE}
+  },{
+    underscored: true
   });
 }
+ 
