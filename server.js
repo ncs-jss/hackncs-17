@@ -61,6 +61,8 @@ app.get('/contri', function(req, res) {
         root: './public'
     });
 });
+
+
 app.post('/studentRegister', function(req, res) {
     var email = req.body.email;
     var contactNo = req.body.number;
@@ -85,7 +87,7 @@ app.get('/events', function(req, res) {
         root: './public'
     });
 });
-app.get('/registration', function(req, res) {
+app.get('/register', function(req, res) {
     res.sendFile('/register.html', {
         root: './public'
     });
