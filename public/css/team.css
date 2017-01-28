@@ -109,7 +109,63 @@
 .sixth_img {
     background-image: url(../media/team/1.6.1.jpg);
 }
-
+.seventh_img{
+    background-image: url(../media/team/1.7.1.jpg);    
+}
+.eight_img{
+    background-image: url(../media/team/1.8.1.jpg);
+}
+.a1_img{
+    background-image: url(../media/team/2.1.jpg);
+}
+.a2_img{
+    background-image: url(../media/team/2.2.jpg);
+}
+.a3_img{
+    background-image: url(../media/team/2.3.jpg);
+}
+.a4_img{
+    background-image: url(../media/team/2.4.jpg);
+}
+.a5_img{
+    background-image: url(../media/team/2.5.jpg);
+}
+.b1_img{
+    background-image: url(../media/team/second/3.1.jpg);
+}
+.b2_img{
+    background-image: url(../media/team/second/3.2.jpg);
+}
+.b3_img{
+    background-image: url(../media/team/second/3.3.jpg);
+}
+.b4_img{
+    background-image: url(../media/team/second/3.4.JPG);
+}
+.b5_img{
+    background-image: url(../media/team/second/3.5.jpg);
+}
+.b6_img{
+    background-image: url(../media/team/second/3.7.jpg);
+}
+.b7_img{
+    background-image: url(../media/team/second/3.6.png);
+}
+.b8_img{
+    background-image: url(../media/team/second/3.8.jpg);
+}
+.b9_img{
+    background-image: url(../media/team/second/3.3.jpg);
+}
+.b10_img{
+    background-image: url(../media/team/second/3.10.jpeg);
+}
+.b11_img{
+    background-image: url(../media/team/second/3.5.jpg);
+}
+.b12_img{
+    background-image: url(../media/team/second/3.7.jpg);
+}
 .alumni-cover {
     height: 100vh;
     background-size: cover;
@@ -140,3 +196,4 @@
     color: #fff;
     line-height: 20px;
 }
+
