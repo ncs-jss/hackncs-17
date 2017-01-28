@@ -155,24 +155,29 @@ app.get('/getevents', function(req, res) {
 // })
 
 
-// app.get('/upcomingEvent', function(req, res) {
-//     Event.findAndCountAll({
-//         where: {
-//             $and: [{
-//                 displayStartTime: {
-//                     $lt: new Date()
-//                 }
-//             }, {
-//                 displayEndTime: {
-//                     $gt: new Date()
-//                 }
-//             }]
-//         }
-//     }).then(function(result) {
-//         console.log(result.count);
-//         res.send(result.rows);
-//     });
-// });
+
+// to get the events whose poster are to be live @current time.
+app.get('/upcomingEvent', function(req, res) {
+    Event.findAndCountAll({
+        where: {
+            $and: [{
+                display_start_time: {
+                    $lt: new Date()
+                }
+            }, {
+                display_end_time: {
+                    $gt: new Date()
+                }
+            }]
+        }
+    }).then(function(result) {
+        console.log(result.count);
+        res.send(result.rows);
+    });
+});
+
+
+
 app.get('/', function(req, res) {
     console.log(__dirname + '/public');
     res.sendFile('/index.html', {
