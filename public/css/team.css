@@ -76,14 +76,14 @@
 .details .name {
     background: #e17259;
     padding-left: 30px;
-    animation-delay: 0.2s;
+    animation-delay: .72s;
 }
 
 .details .designation {
     padding-left: 30px;
     margin-right: 20px;
     background: #101524;
-    animation-delay: 0.5s;
+    animation-delay: .65s;
 }
 
 .first_img {
