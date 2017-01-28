@@ -220,14 +220,16 @@
 
 .alumni-details {
     height: 100vh;
-    padding-left: 130px;
-    padding-top: 100px;
+    padding-left: 75px;
+    padding-top: 25px;
 }
 
 .alumni-details h2 {
-    color: #fff;
-    margin-bottom: 30px;
-}
+        color: #fff;
+    margin-bottom: 35px;
+    font-family: Blanch Caps;
+    font-size: 50px;
+    padding-top: 68px;}
 
 .alumni-details li {
     list-style: none;
@@ -235,13 +237,14 @@
 
 .alumni-details li strong {
     color: #e17259;
-    font-size: 50px;
+    font-size: 40px;
     font-family: Blanch Caps;
 }
 
 .alumni-details li a {
     font-size: 20px;
-    padding-left: 50px;
+    /*padding-left: 50px;*/
     color: #fff;
     line-height: 20px;
+    text-align: right;
 }
