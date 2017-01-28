@@ -85,20 +85,43 @@
 
 footer {
     /*background: rgba(0, 0, 0, 0.6);*/
-    background: rgba(32, 32, 47, 0.91);
+    background: rgba(32, 32, 47, 0.6);
     position: absolute;
     /*bottom: 0px;*/
     width: 100%;
     height: 120px;
 }
 
-footer img {
-    height: 100px;
-    width: 215px;
+footer .social-links {
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+footer .social-links div {
+    padding: 20px 0px 10px 20px;
+}
+
+footer .social-links a {
+    padding-left: 10px;
+    text-decoration: none !important;
+    font-size: 17px;
+    color: rgba(99, 99, 114, 0.89);
+    transition: 1s;
+}
+
+footer .social-links span {
+    color: #eee;
+    font-size: 16px;
+}
+
+footer .social-links a:hover {
+    color: #fff;
 }
 
 footer .logo-box {
-    height: 100px;
+    height: 120px;
     width: 215px;
     background: url(/media/logo/ncsncs_logo.png);
     background-size: cover;
