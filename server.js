@@ -9,6 +9,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var Sequelize = require("sequelize");
 //var bodyParser  = require("body-parser");
+
+
 app.use(bodyParser.urlencoded({
     extended: false
 }));
@@ -24,6 +26,8 @@ var sequelize = new Sequelize(dbConfig.dbName, dbConfig.dbUserName, dbConfig.dbP
         idle: 1000
     },
 });
+
+
 sequelize.authenticate().then(function(err) {
     console.log("connection established");
 }).catch(function(err) {
@@ -34,6 +38,10 @@ sequelize.sync();
 var Student = sequelize.import('./models/student.model.js');
 var Event = sequelize.import('./models/event.model.js');
 
+Student.belongsToMany(Event, {through : 'registerations'});
+Event.belongsToMany(Student, {through : 'registerations'});
+
+//Routes for rendering files.
 
 app.get('/contact', function(req, res) {
     res.sendFile('/contact.html', {
@@ -51,26 +59,6 @@ app.get('/contri', function(req, res) {
     res.sendFile('/contri.html', {
         root: './public'
     });
-});
-
-app.post('/studentRegister', function(req, res) {
-    var email = req.body.email;
-    var contactNo = req.body.number;
-    Student.findOrCreate({
-        where: {
-            'email': email
-        },
-        defaults: {
-            'contactNo': contactNo
-        }
-    }).spread(function(student, created) {
-        console.log(student);
-        console.log(student.get({
-            plain: true
-        }))
-        console.log(created);
-    })
-    res.send("welcome home!");
 });
 
 
@@ -95,58 +83,104 @@ app.get('/team', function(req, res) {
 })
 
 
-app.get('/getevents', function(req, res) {
-    Event.all().then(events => res.status(200).send(todos))
-    .catch(error => res.status(400).send(error));
-});
 
 
-app.post("/event", function(req, res) {
-    var eventName = req.body.eventName;
-    var displayStartTime = req.body.displayStartTime;
-    var displayEndTime = req.body.displayEndTime;
-    Event.findOrCreate({
+//Functional Routes.
+
+
+// accepting  an object  {email : **,number: ** , year :  ** , name: ** ,admissionNumber : **};
+app.post('/studentRegister', function(req, res) {
+    //console.log("req.body.email is "  +req.body.email);
+    var email = req.body.email;
+    var contactNo = req.body.number;
+    var year = req.body.year;
+    var name = req.body.name;
+    var admissionNumber =req.body.admissionNumber;
+    var event_id = req.body.event_id;
+    //console.log(req.body);
+    Student.findOrCreate({
         where: {
-            'eventName': eventName
+            'email': email
         },
         defaults: {
-            'displayEndTime': displayEndTime,
-            'displayStartTime': displayStartTime
+            'contact_no': contactNo,
+            'year' : year,
+            'name' : name,
+            'admission_no' : admissionNumber
         }
-    }).spread(function(events, created) {
+    }).spread(function(student, created) {
         //console.log(student);
-        console.log(events.get({
+        student.addEvent(event_id);
+        console.log("added an entry in registerations");
+
+        console.log(student.get({
             plain: true
         }))
-        res.send("created!");
+        console.log("Created At student Table " +created);
     })
-})
-
-
-app.get('/event', function(req, res) {
-    Event.findAndCountAll({
-        where: {
-            $and: [{
-                displayStartTime: {
-                    $lt: new Date()
-                }
-            }, {
-                displayEndTime: {
-                    $gt: new Date()
-                }
-            }]
-        }
-    }).then(function(result) {
-        console.log(result.count);
-        res.send(result.rows);
-    });
+        res.send("studentCreaded is ");
 });
+
+
+
+//Used to get all the routes.
+app.get('/getevents', function(req, res) {
+    Event.all().then(events => res.status(200).send(events))
+    .catch(error => {res.status(400).send(error); console.log(error)});
+
+});
+
+
+
+
+// app.post("/event", function(req, res) {
+//     var eventName = req.body.eventName;
+//     var displayStartTime = req.body.displayStartTime;
+//     var displayEndTime = req.body.displayEndTime;
+//     Event.findOrCreate({
+//         where: {
+//             'eventName': eventName
+//         },
+//         defaults: {
+//             'displayEndTime': displayEndTime,
+//             'displayStartTime': displayStartTime
+//         }
+//     }).spread(function(events, created) {
+//         //console.log(student);
+//         console.log(events.get({
+//             plain: true
+//         }))
+//         res.send("created!");
+//     })
+// })
+
+
+// app.get('/upcomingEvent', function(req, res) {
+//     Event.findAndCountAll({
+//         where: {
+//             $and: [{
+//                 displayStartTime: {
+//                     $lt: new Date()
+//                 }
+//             }, {
+//                 displayEndTime: {
+//                     $gt: new Date()
+//                 }
+//             }]
+//         }
+//     }).then(function(result) {
+//         console.log(result.count);
+//         res.send(result.rows);
+//     });
+// });
 app.get('/', function(req, res) {
     console.log(__dirname + '/public');
     res.sendFile('/index.html', {
         root: __dirname + '\\public'
     });
-})
+});
+
+
 app.listen(3000,function() {
     console.log("we are listening at port 3000\n type  http://localhost:3000/ in chrome");
 });
