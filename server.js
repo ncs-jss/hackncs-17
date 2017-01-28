@@ -89,7 +89,7 @@ app.get('/team', function(req, res) {
 
 
 // accepting  an object  {email : **,number: ** , year :  ** , name: ** ,admissionNumber : **};
-app.post('/studentRegister', function(req, res) {
+app.post('/api/studentRegister', function(req, res) {
     //console.log("req.body.email is "  +req.body.email);
     var email = req.body.email;
     var contactNo = req.body.number;
@@ -123,8 +123,9 @@ app.post('/studentRegister', function(req, res) {
 
 
 
+
 //Used to get all the routes.
-app.get('/getevents', function(req, res) {
+app.get('/api/getevents', function(req, res) {
     Event.all().then(events => res.status(200).send(events))
     .catch(error => {res.status(400).send(error); console.log(error)});
 
@@ -157,22 +158,14 @@ app.get('/getevents', function(req, res) {
 
 
 // to get the events whose poster are to be live @current time.
-app.get('/upcomingEvent', function(req, res) {
-    Event.findAndCountAll({
-        where: {
-            $and: [{
-                display_start_time: {
-                    $lt: new Date()
-                }
-            }, {
-                display_end_time: {
-                    $gt: new Date()
-                }
-            }]
-        }
+
+app.get('/api/upcomingEvent', function(req, res) {
+    Event.findOne({order: '"start_time" DESC' 
+        
+
     }).then(function(result) {
-        console.log(result.count);
-        res.send(result.rows);
+        console.log(result);
+        res.send(result);
     });
 });
 
