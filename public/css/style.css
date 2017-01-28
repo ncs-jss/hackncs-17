@@ -1814,7 +1814,7 @@ g#wheel_2_ {
         opacity: .4
     }
     to {
-        -webkit-filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(270deg);
         opacity: .7
     }
 }
@@ -1825,7 +1825,7 @@ g#wheel_2_ {
         opacity: .4
     }
     to {
-        -webkit-filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(270deg);
         opacity: .7
     }
 }
@@ -1836,7 +1836,7 @@ g#wheel_2_ {
         opacity: .4
     }
     to {
-        -webkit-filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(270deg);
         opacity: .7
     }
 }
@@ -1847,7 +1847,7 @@ g#wheel_2_ {
         opacity: .4
     }
     to {
-        -webkit-filter: hue-rotate(360deg);
+        -webkit-filter: hue-rotate(270deg);
         opacity: .7
     }
 }

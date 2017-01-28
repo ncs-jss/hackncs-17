@@ -16,6 +16,11 @@
     animation-direction: alternate;
 }
 
+#top.arrow-wrapper img {
+    transform: rotate(180deg);
+    /*display: none;*/
+}
+
 .images-list img {
     display: none;
 }
