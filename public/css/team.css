@@ -109,3 +109,34 @@
 .sixth_img {
     background-image: url(../media/team/1.6.1.jpg);
 }
+
+.alumni-cover {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/media/team/alumni.jpg");
+}
+
+.alumni-details {
+    height: 100vh;
+    padding-left: 130px;
+    padding-top: 100px;
+}
+
+.alumni-details h2 {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.alumni-details li strong {
+    color: #e17259;
+    font-size: 50px;
+    font-family: Blanch Caps;
+}
+
+.alumni-details li a {
+    font-size: 20px;
+    padding-left: 50px;
+    color: #fff;
+    line-height: 20px;
+}
