@@ -389,7 +389,8 @@ Main Components
 .projects-container .cd-close {
     position: fixed;
     top: 30px;
-    right: 5%;
+    left: 50%;
+    margin-left: -22px;
     background: url("../media/clubs/cd-icon-close-mobile.svg") no-repeat center center;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
