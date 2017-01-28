@@ -30,8 +30,10 @@
     font-size: 20px;
     opacity: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    padding-right: 20px;
     /*transition: 2s;*/
     /*opacity: 0.6;*/
     transition: all 1s ease-in-out;
@@ -49,25 +51,30 @@
 .social-row {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 130px;
+    opacity: 0;
+    transition: 3s;
+}
+
+.img-box .social-row a {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+}
+
+.img-box:hover .social-row {
+    opacity: 1;
 }
 
 .social-row .icon-fb {
-    /*background: url(https://cdn0.iconfinder.com/data/iconsets/previews/medium/neon-line-social-circles-black.png);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 50px;
-    height: 50px;
+    background: url(../media/fb.png);
 }
 
 .social-row .icon-linkedin {
-    /*background: url(https://cdn0.iconfinder.com/data/iconsets/previews/medium/neon-line-social-circles-black.png);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 50px;
-    height: 50px;
+    background: url(../media/linkedin.png);
 }
 
 .details {
@@ -78,12 +85,13 @@
     font-size: 30px;
     width: 220px;
     color: #fff;
-    transition: 2s;
+    transition: 1s;
 }
 
 .img-box:hover .details {
     /*transform: scaleX(0);*/
     /*transform-origin: left;*/
+    opacity: 0;
 }
 
 .details .name {
