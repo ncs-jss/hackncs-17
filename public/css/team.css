@@ -9,8 +9,10 @@
 }
 
 .img {
-    background-position: center;
+    /*background-position: center;*/
+    background-position: top;
     background-size: cover;
+    background-repeat: no-repeat;
     height: 50vh;
     width: 100%;
     transition: all 1s ease-in-out;
@@ -53,6 +55,17 @@
 .social-row .icon-fb {
     /*background: url(https://cdn0.iconfinder.com/data/iconsets/previews/medium/neon-line-social-circles-black.png);*/
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+}
+
+.social-row .icon-linkedin {
+    /*background: url(https://cdn0.iconfinder.com/data/iconsets/previews/medium/neon-line-social-circles-black.png);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     width: 50px;
     height: 50px;
 }
@@ -109,66 +122,87 @@
 .sixth_img {
     background-image: url(../media/team/1.6.1.jpg);
 }
-.seventh_img{
-    background-image: url(../media/team/1.7.1.jpg);    
+
+.seventh_img {
+    background-image: url(../media/team/1.7.1.jpg);
 }
-.eight_img{
+
+.eight_img {
     background-image: url(../media/team/1.8.1.jpg);
 }
-.ninth_img{
+
+.ninth_img {
     background-image: url(../media/team/1.9.1.jpg);
 }
-.a1_img{
+
+.a1_img {
     background-image: url(../media/team/2.1.jpg);
 }
-.a2_img{
+
+.a2_img {
     background-image: url(../media/team/2.2.jpg);
 }
-.a3_img{
+
+.a3_img {
     background-image: url(../media/team/2.3.jpg);
 }
-.a4_img{
+
+.a4_img {
     background-image: url(../media/team/2.4.jpg);
 }
-.a5_img{
+
+.a5_img {
     background-image: url(../media/team/2.5.jpg);
 }
-.b1_img{
+
+.b1_img {
     background-image: url(../media/team/second/3.1.jpg);
 }
-.b2_img{
+
+.b2_img {
     background-image: url(../media/team/second/3.2.jpg);
 }
-.b3_img{
+
+.b3_img {
     background-image: url(../media/team/second/3.3.jpg);
 }
-.b4_img{
+
+.b4_img {
     background-image: url(../media/team/second/3.4.JPG);
 }
-.b5_img{
+
+.b5_img {
     background-image: url(../media/team/second/3.5.jpg);
 }
-.b6_img{
+
+.b6_img {
     background-image: url(../media/team/second/3.7.jpg);
 }
-.b7_img{
+
+.b7_img {
     background-image: url(../media/team/second/3.6.png);
 }
-.b8_img{
-    background-image: url(../media/team/second/3.8.jpg);
+
+.b8_img {
+    background-image: url(../media/team/second/3.8.3.jpg);
 }
-.b9_img{
-    background-image: url(../media/team/second/3.3.jpg);
+
+.b9_img {
+    background-image: url(../media/team/second/3.9.jpg);
 }
-.b10_img{
+
+.b10_img {
     background-image: url(../media/team/second/3.10.jpeg);
 }
-.b11_img{
-    background-image: url(../media/team/second/3.5.jpg);
+
+.b11_img {
+    background-image: url(../media/team/second/3.11.jpg);
 }
-.b12_img{
-    background-image: url(../media/team/second/3.7.jpg);
+
+.b12_img {
+    background-image: url(../media/team/second/3.12.jpg);
 }
+
 .alumni-cover {
     height: 100vh;
     background-size: cover;
@@ -187,6 +221,10 @@
     margin-bottom: 30px;
 }
 
+.alumni-details li {
+    list-style: none;
+}
+
 .alumni-details li strong {
     color: #e17259;
     font-size: 50px;
@@ -199,4 +237,3 @@
     color: #fff;
     line-height: 20px;
 }
-
