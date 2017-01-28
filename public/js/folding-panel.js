@@ -1,24 +1,24 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     var gallery = $('.cd-gallery'),
         foldingPanel = $('.cd-folding-panel'),
         mainContent = $('.cd-main');
     /* open folding content */
-    gallery.on('click', 'a', function(event) {
+    gallery.on('click', 'a', function (event) {
         event.preventDefault();
         openItemInfo($(this).attr('href'));
     });
     /* close folding content */
-    foldingPanel.on('click', '.cd-close', function(event) {
+    foldingPanel.on('click', '.cd-close', function (event) {
         event.preventDefault();
         toggleContent('', false);
     });
-    $(document).on('keydown', function(event) {
+    $(document).on('keydown', function (event) {
         event.preventDefault();
         if (event.keyCode === 27) {
             toggleContent('', false);
         }
     });
-    gallery.on('click', function(event) {
+    gallery.on('click', function (event) {
         /* detect click on .cd-gallery::before when the .cd-folding-panel is open */
         if ($(event.target).is('.cd-gallery') && $('.fold-is-open').length > 0) toggleContent('', false);
     })
@@ -29,14 +29,14 @@ jQuery(document).ready(function($) {
             /* if content is visible above the .cd-gallery - scroll before opening the folding panel */
             $('body,html').animate({
                 'scrollTop': gallery.offset().top
-            }, 100, function() {
+            }, 100, function () {
                 toggleContent(url, true);
             });
         } else if (gallery.offset().top + gallery.height() < $(window).scrollTop() + $(window).height() && mq != 'mobile') {
             /* if content is visible below the .cd-gallery - scroll before opening the folding panel */
             $('body,html').animate({
                 'scrollTop': gallery.offset().top + gallery.height() - $(window).height()
-            }, 100, function() {
+            }, 100, function () {
                 toggleContent(url, true);
             });
         } else {
@@ -48,12 +48,14 @@ jQuery(document).ready(function($) {
         if (bool) {
             /* load and show new content */
             var foldingContent = foldingPanel.find('.cd-fold-content');
-            foldingContent.load(url + ' .cd-fold-content > *', function(data) {
+            foldingContent.load(url + ' .cd-fold-content > *', function (data) {
                 data = $.parseJSON(data);
                 console.log(data);
-                var htmlStr = '<img class="img-responsive" src="' + data.image + '"><h1>' + data.title + '</h1><p>' + data.desc + '</p>';
+                var htmlStr = '<img style="max-height:220px;width:auto;" src="' + data.image + '"><h1>' + data.title + '</h1><p style="color:#555;">' + data.desc + '</p>';
+                // var htmlStr = '<h1 style="margin-top:100px;">' + data.title + '</h1><p style="color:#555;">' + data.desc + '</p>';
                 $(".cd-fold-content").html(htmlStr);
-                setTimeout(function() {
+                // $("body").addClass("disabled-onepage-scroll");
+                setTimeout(function () {
                     $('body').addClass('overflow-hidden');
                     foldingPanel.addClass('is-open');
                     mainContent.addClass('fold-is-open');
@@ -64,9 +66,10 @@ jQuery(document).ready(function($) {
             var mq = viewportSize();
             foldingPanel.removeClass('is-open');
             mainContent.removeClass('fold-is-open');
+            // $("body").removeClass("disabled-onepage-scroll");
             (mq == 'mobile' || $('.no-csstransitions').length > 0)
             /* according to the mq, immediately remove the .overflow-hidden or wait for the end of the animation */
-            ? $('body').removeClass('overflow-hidden'): mainContent.find('.cd-item').eq(0).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+            ? $('body').removeClass('overflow-hidden'): mainContent.find('.cd-item').eq(0).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
                 $('body').removeClass('overflow-hidden');
                 mainContent.find('.cd-item').eq(0).off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
             });
