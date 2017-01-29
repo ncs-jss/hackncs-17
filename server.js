@@ -91,28 +91,34 @@ app.post('/api/studentRegister', function (req, res) {
     var year = req.body.year;
     var name = req.body.name;
     var admissionNumber = req.body.admissionNumber;
-    var event_id = req.body.event_id;
+    // var event_id = req.body.event_id;
+    var event_id;
+    Event.findOne({
+        order: 'start_time DESC'
+    }).then(function (result) {
+        event_id  = result.id;
+        Student.findOrCreate({
+            where: {
+                'email': email
+            },
+            defaults: {
+                'contact_no': contactNo,
+                'year': year,
+                'name': name,
+                'admission_no': admissionNumber
+            }
+        }).spread(function (student, created) {
+            //console.log(student);
+            student.addEvent(event_id);
+            console.log("added an entry in registrations");
+            console.log(student.get({
+                plain: true
+            }))
+            console.log("Created At student Table " + created);
+        })
+        res.send("studentCreaded is ");
+    });
     //console.log(req.body);
-    Student.findOrCreate({
-        where: {
-            'email': email
-        },
-        defaults: {
-            'contact_no': contactNo,
-            'year': year,
-            'name': name,
-            'admission_no': admissionNumber
-        }
-    }).spread(function (student, created) {
-        //console.log(student);
-        student.addEvent(event_id);
-        console.log("added an entry in registrations");
-        console.log(student.get({
-            plain: true
-        }))
-        console.log("Created At student Table " + created);
-    })
-    res.send("studentCreaded is ");
 });
 //Used to get all the routes.
 app.get('/api/getevents', function (req, res) {

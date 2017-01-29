@@ -58,16 +58,25 @@ $(window).bind("load", function() {
                 $input.blur(function(e) {
                     $(this).toggleClass('filled', !!$(this).val());
                 });
-                var submitBtn = $('.form input[type=submit]');
+                console.log($input);
+                var submitBtn = $('#register-form input[type=submit]');
                 submitBtn.on("click", function() {
-                    var formData;
-                    if ($('.form:valid').length > 0) {
-                        console.log('valid');
+                    if ($('#register-form:valid').length > 0) {
+                        var formData = {
+                            name:$input.eq(0).val(),
+                            email:$input.eq(1).val(),
+                            contactNo:$input.eq(2).val(),
+                            admissionNumber:$input.eq(3).val(),
+                            year:$input.eq(4).val()
+                        }
                         $.post(address, formData, function(data) {
                             console.log(data);
                         });
                     }
-                })
+                });
+                break;
+            case "team":
+                onePage();
                 break;
             case "events":
                 var address = baseUrl + "getevents";
@@ -100,10 +109,10 @@ $(window).bind("load", function() {
                         item.eq(i).css('background-image', 'url(' + imgUrl + ')');
                         item.find("a").eq(0).attr("href", data[i].id);
                         //Second Image
-                        imgUrl = imgBase + data[i+1].poster_file_name + data[i+1].poster_content_type;
-                        item.eq(i+1).css('background-image', 'url(' + imgUrl + ')');
-                        item.eq(i+1).css('background-image', 'url(' + imgUrl + ')');
-                        item.find("a").eq(1).attr("href", data[i+1].id);
+                        imgUrl = imgBase + data[i + 1].poster_file_name + data[i + 1].poster_content_type;
+                        item.eq(i + 1).css('background-image', 'url(' + imgUrl + ')');
+                        item.eq(i + 1).css('background-image', 'url(' + imgUrl + ')');
+                        item.find("a").eq(1).attr("href", data[i + 1].id);
                         node.appendTo(parent);
                     }
                     //at last add plugins
