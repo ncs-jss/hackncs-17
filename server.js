@@ -79,6 +79,9 @@ app.get('/team', function (req, res) {
         root: './public'
     });
 })
+
+
+
 //Functional Routes.
 // accepting  an object  {email : **,number: ** , year :  ** , name: ** ,admissionNumber : **};
 app.post('/api/studentRegister', function (req, res) {
@@ -113,7 +116,9 @@ app.post('/api/studentRegister', function (req, res) {
 });
 //Used to get all the routes.
 app.get('/api/getevents', function (req, res) {
-    Event.all().then(events => res.status(200).send(events)).catch(error => {
+    Event.all({
+        order: 'start_time DESC'
+    }).then(events => res.status(200).send(events)).catch(error => {
         res.status(400).send(error);
         console.log(error)
     });
@@ -141,12 +146,14 @@ app.get('/api/getevents', function (req, res) {
 // to get the events whose poster are to be live @current time.
 app.get('/api/upcomingEvent', function (req, res) {
     Event.findOne({
-        order: '"start_time" DESC'
+        order: 'start_time DESC'
     }).then(function (result) {
         console.log(result);
         res.send(result);
     });
 });
+
+
 app.get('/api/events/:id', function (req, res) {
     Event.findOne({
         id: req.params.id
