@@ -18,7 +18,7 @@ $(window).bind("load", function () {
             });
         });
         var route = $("body").data("page");
-        var baseUrl = "/api/";
+        var baseUrl = "http://techtrek.hackncs.com/api/";
         switch (route) {
         case "home":
             var textFields = $(".toi-text");
@@ -42,15 +42,41 @@ $(window).bind("load", function () {
                 setInterval(changeText, 4000);
                 setInterval(changeImg, 4000);
             }
+            var address = baseUrl + "upcomingEvent";
+            $.get(address, function (data) {
+                var htmlString = "a";
+                console.log(data);
+                var imgUrl = "/media/events/" + data.poster_file_name + data.poster_content_type;
+                $("#event-description").html(data.description);
+                $("#event-image").attr("src",imgUrl);
+            });
+            // home ends
+            break;
+        case "register":
+            console.log('register');
+            var address = baseUrl + "studentRegister";
+            var $input = $('.form-fieldset > input');
+            $input.blur(function (e) {
+                $(this).toggleClass('filled', !!$(this).val());
+            });
+            var submitBtn = $('.form input[type=submit]');
+            submitBtn.on("click", function () {
+                var formData;
+                if ($('.form:valid').length > 0) {
+                    console.log('valid');
+                    $.post(address, formData, function (data) {
+                        console.log(data);
+                    });
+                }
+            })
+            break;
+        case "events":
             var address = baseUrl + "getevents";
-            $.get(address,function(data){
+            $.get(address, function (data) {
                 var htmlString = "a";
                 console.log(data);
             })
-            // home ends
             break;
-            case "register" : console.log('register');break;
-            case "events" : console.log('events');break;
         }
         var pages = $("#full-page").children(".section");
         $("#top").hide();
@@ -81,8 +107,6 @@ $(window).bind("load", function () {
                     case 1:
                         break;
                     case 2:
-                        $(".upcoming-event-heading").addClass("animated fadeInUp");
-                        $(".upcoming-event-wrapper img").addClass("animated fadeInUp");
                         break;
                     case 3:
                         $(".stats-grid-box").addClass("anim-in-view");

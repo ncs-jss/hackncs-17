@@ -1,3 +1,7 @@
+a {
+    text-decoration: none !important;
+}
+
 @font-face {
     font-family: "BigNoodleTitling";
     src: url(/fonts/big_noodle_titling.ttf);
@@ -212,6 +216,10 @@ footer .logo-box {
     /*font-family: "BigNoodleTitling";*/
     font-family: "Blanch Caps";
     box-shadow: 4px 2px 42px 4px rgba(0, 0, 0, 0.5);
+}
+
+.fb {
+    width: 50px;
 }
 
 .heading-badge h4 {
