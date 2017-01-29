@@ -59,10 +59,11 @@
 
 .img-box .social-row a {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     width: 60px;
     height: 60px;
+    transition: 0.4s;
 }
 
 .img-box:hover .social-row {
@@ -70,11 +71,19 @@
 }
 
 .social-row .icon-fb {
-    background: url(../media/fb.png);
+    background-image: url(../media/fb.png);
 }
 
 .social-row .icon-linkedin {
-    background: url(../media/linkedin.png);
+    background-image: url(../media/linkedin.png);
+}
+
+.social-row .icon-fb:hover {
+    background-image: url(../media/fb4.png);
+}
+
+.social-row .icon-linkedin:hover {
+    background-image: url(../media/l4.png);
 }
 
 .details {
@@ -225,11 +234,12 @@
 }
 
 .alumni-details h2 {
-        color: #fff;
+    color: #fff;
     margin-bottom: 35px;
     font-family: Blanch Caps;
     font-size: 50px;
-    padding-top: 68px;}
+    padding-top: 68px;
+}
 
 .alumni-details li {
     list-style: none;

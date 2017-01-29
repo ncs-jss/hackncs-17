@@ -46,7 +46,10 @@ $(window).bind("load", function () {
             $.get(address, function (data) {
                 var htmlString = "a";
                 console.log(data);
-            })
+                var imgUrl = "/media/events/" + data.poster_file_name + data.poster_content_type;
+                $("#event-description").html(data.description);
+                $("#event-image").attr("src",imgUrl);
+            });
             // home ends
             break;
         case "register":
@@ -104,8 +107,6 @@ $(window).bind("load", function () {
                     case 1:
                         break;
                     case 2:
-                        $(".upcoming-event-heading").addClass("animated fadeInUp");
-                        $(".upcoming-event-wrapper img").addClass("animated fadeInUp");
                         break;
                     case 3:
                         $(".stats-grid-box").addClass("anim-in-view");
