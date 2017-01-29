@@ -114,7 +114,7 @@ footer .social-links {
 }
 
 footer .social-links div {
-    padding: 20px 0px 10px 20px;
+    padding: 20px 0px 10px 10px;
 }
 
 footer .social-links a {
@@ -123,6 +123,10 @@ footer .social-links a {
     font-size: 17px;
     color: rgba(99, 99, 114, 0.89);
     transition: 1s;
+}
+
+footer .social-links img {
+    width: 60px;
 }
 
 footer .social-links span {
