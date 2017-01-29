@@ -102,7 +102,7 @@ footer {
 }
 
 footer .social-links {
-    height: 120px;
+    height: 110px;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
