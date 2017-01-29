@@ -59,11 +59,16 @@ a {
     font-style: normal
 }
 
-.preloader-wrapper.visible {
+.preloader-wrapper {
     height: 100%;
+    width: 100%;
     overflow: hidden;
-    position: relative;
-    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    /*background: url(../media/Preloader_6.gif) center no-repeat #95a5a6;*/
+    background: url(../media/preloader.svg) center no-repeat #2c3e50;
 }
 
 .logo-wrapper {

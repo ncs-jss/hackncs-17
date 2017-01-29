@@ -2,7 +2,8 @@
 $(window).bind("load", function() {
     $(document).ready(function() {
         $("#main-body").removeClass("unloaded");
-        $(".preloader-wrapper").removeClass("visible");
+        // $(".preloader-wrapper").hide();
+        $(".preloader-wrapper").fadeOut("slow");
         $(".image-gallery-wrapper").addClass("loaded");
         $(".back-button").on("click", function() {
             window.history.back();
