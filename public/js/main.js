@@ -18,7 +18,7 @@ $(window).bind("load", function () {
             });
         });
         var route = $("body").data("page");
-        var baseUrl = "/api/";
+        var baseUrl = "http://techtrek.hackncs.com/api/";
         switch (route) {
         case "home":
             var textFields = $(".toi-text");
@@ -42,15 +42,38 @@ $(window).bind("load", function () {
                 setInterval(changeText, 4000);
                 setInterval(changeImg, 4000);
             }
-            var address = baseUrl + "getevents";
-            $.get(address,function(data){
+            var address = baseUrl + "upcomingEvent";
+            $.get(address, function (data) {
                 var htmlString = "a";
                 console.log(data);
             })
             // home ends
             break;
-            case "register" : console.log('register');break;
-            case "events" : console.log('events');break;
+        case "register":
+            console.log('register');
+            var address = baseUrl + "studentRegister";
+            var $input = $('.form-fieldset > input');
+            $input.blur(function (e) {
+                $(this).toggleClass('filled', !!$(this).val());
+            });
+            var submitBtn = $('.form input[type=submit]');
+            submitBtn.on("click", function () {
+                var formData;
+                if ($('.form:valid').length > 0) {
+                    console.log('valid');
+                    $.post(address, formData, function (data) {
+                        console.log(data);
+                    });
+                }
+            })
+            break;
+        case "events":
+            var address = baseUrl + "getevents";
+            $.get(address, function (data) {
+                var htmlString = "a";
+                console.log(data);
+            })
+            break;
         }
         var pages = $("#full-page").children(".section");
         $("#top").hide();
