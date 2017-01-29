@@ -213,7 +213,9 @@ footer .logo-box {
     font-family: "Blanch Caps";
     box-shadow: 4px 2px 42px 4px rgba(0, 0, 0, 0.5);
 }
-
+.fb{
+    width: 50px;
+}
 .heading-badge h4 {
     font-size: 32px;
 }

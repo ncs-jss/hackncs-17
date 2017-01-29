@@ -123,6 +123,7 @@ app.post('/api/studentRegister', function(req, res) {
 
 
 
+
 //Used to get all the routes.
 app.get('/api/getevents', function(req, res) {
     Event.all().then(events => res.status(200).send(events))
@@ -157,22 +158,14 @@ app.get('/api/getevents', function(req, res) {
 
 
 // to get the events whose poster are to be live @current time.
+
 app.get('/api/upcomingEvent', function(req, res) {
-    Event.findAndCountAll({
-        where: {
-            $and: [{
-                display_start_time: {
-                    $lt: new Date()
-                }
-            }, {
-                display_end_time: {
-                    $gt: new Date()
-                }
-            }]
-        }
+    Event.findOne({order: '"start_time" DESC' 
+        
+
     }).then(function(result) {
-        console.log(result.count);
-        res.send(result.rows);
+        console.log(result);
+        res.send(result);
     });
 });
 
