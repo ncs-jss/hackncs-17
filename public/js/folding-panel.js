@@ -50,11 +50,11 @@ jQuery(document).ready(function($) {
             var foldingContent = foldingPanel.find('.cd-fold-content');
             console.log(url);
             arr = JSON.parse(sessionStorage.getItem("events"));
-            data = arr[parseInt(url) - 1];
-            var imgUrl = "/media/events/" + data.poster_file_name + "-l" + data.poster_content_type;
+            data = arr[parseInt(url)];
+            var imgUrl = "/media/events/large/" + data.image;
             $(".cd-fold-content img").attr("src", imgUrl);
-            $(".cd-fold-content h1").html(data.name);
-            $(".cd-fold-content p").html(data.description);
+            $(".cd-fold-content h1").html(data.title);
+            $(".cd-fold-content p").html(data.desc);
             setTimeout(function() {
                 $('body').addClass('overflow-hidden');
                 foldingPanel.addClass('is-open');

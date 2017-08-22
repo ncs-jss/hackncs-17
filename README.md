@@ -7,6 +7,8 @@ Official website Of NCS
 
 
 ##Navigate to the hackncs17 folder in terminal using cd "path/to/folder"
-## $npm install --save
-## $npm install -nodemon -g
-## $nodemon server.js
+```
+    $ npm install --save
+    $ npm install -nodemon -g
+    $ nodemon server.js
+```

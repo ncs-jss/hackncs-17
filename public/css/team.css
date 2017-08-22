@@ -116,42 +116,6 @@
     animation-delay: .65s;
 }
 
-.first_img {
-    background-image: url(../media/team/1.1.1.jpg);
-}
-
-.second_img {
-    background-image: url(../media/team/1.2.1.jpg);
-}
-
-.third_img {
-    background-image: url(../media/team/1.3.1.jpg);
-}
-
-.fourth_img {
-    background-image: url(../media/team/1.4.1.jpg);
-}
-
-.fifth_img {
-    background-image: url(../media/team/1.5.1.jpg);
-}
-
-.sixth_img {
-    background-image: url(../media/team/1.6.1.jpg);
-}
-
-.seventh_img {
-    background-image: url(../media/team/1.7.1.jpg);
-}
-
-.eight_img {
-    background-image: url(../media/team/1.8.1.jpg);
-}
-
-.ninth_img {
-    background-image: url(../media/team/1.9.1.jpg);
-}
-
 .a1_img {
     background-image: url(../media/team/2.1.jpg);
 }
@@ -225,36 +189,17 @@
     background-size: cover;
     background-position: center;
     background-image: url("/media/team/alumni.jpg");
+    position: relative;
 }
 
-.alumni-details {
-    height: 100vh;
-    padding-left: 75px;
-    padding-top: 25px;
-}
-
-.alumni-details h2 {
+.alumni-cover h2 {
     color: #fff;
     margin-bottom: 35px;
     font-family: Blanch Caps;
-    font-size: 50px;
+    font-size: 55px;
     padding-top: 68px;
-}
-
-.alumni-details li {
-    list-style: none;
-}
-
-.alumni-details li strong {
-    color: #e17259;
-    font-size: 40px;
-    font-family: Blanch Caps;
-}
-
-.alumni-details li a {
-    font-size: 20px;
-    /*padding-left: 50px;*/
-    color: #fff;
-    line-height: 20px;
-    text-align: right;
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    text-align: center;
 }
