@@ -44,10 +44,10 @@ $(window).bind("load", function () {
                 setInterval(changeText, 4000);
                 setInterval(changeImg, 4000);
             }
-            var address = baseUrl + "event-1.json";
+            var address = baseUrl + "upcomingEvent.json";
             $.get(address, function (data) {
                 var imgUrl = "/media/events/" + data.image;
-                // $("#event-description").html(data.desc);
+                $("#event-description").html(data.desc);
                 $("#event-image").attr("src", imgUrl);
             });
             onePage();
@@ -83,7 +83,6 @@ $(window).bind("load", function () {
         case "events":
             var address = baseUrl + "events.json";
             $.get(address, function (data) {
-                console.log(data);
                 sessionStorage.setItem("events", JSON.stringify(data));
                 var parent = $(".cd-gallery");
                 var section = $(".cd-gallery .section").eq(0);
@@ -98,20 +97,17 @@ $(window).bind("load", function () {
                 item.eq(1).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(..' + imgUrl + ')');
                 item.find("a").eq(1).attr("href", 1);
                 var len = data.length;
-                // var limit = parseInt(len / 2);
                 var i = 2;
-                var x;
                 for (; i < len; i += 2) {
                     var node = section.clone(true);
                     item = node.find(".cd-item");
                     imgUrl = imgBase + data[i].image;
                     item.eq(0).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(..' + imgUrl + ')');
-                    item.find("a").eq(0).attr("href", i + 1);
-                    console.log();
+                    item.find("a").eq(0).attr("href", i);
                     //Second Image
                     imgUrl = imgBase + data[i + 1].image;
                     item.eq(1).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(..' + imgUrl + ')');
-                    item.find("a").eq(1).attr("href", i + 2);
+                    item.find("a").eq(1).attr("href", i + 1);
                     node.appendTo(parent);
                 }
                 //at last add plugins

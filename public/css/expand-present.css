@@ -74,10 +74,10 @@ Main Components
     left: 0;
     height: 25vh;
     width: 100%;
-    background-image: url("../media/clubs/img-1-small.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../media/batthern.png");
+    /*background-repeat: no-repeat;*/
     background-position: center center;
-    background-size: cover;
+    /*background-size: cover;*/
     -webkit-transition: opacity 0.5s, height 0.4s;
     -moz-transition: opacity 0.5s, height 0.4s;
     transition: opacity 0.5s, height 0.4s;
@@ -85,7 +85,7 @@ Main Components
 
 .projects-container .cd-single-project::before {
     /* never visible - this is used in jQuery to detect if the background image has been loaded  */
-    content: '../media/clubs/img-1-small.jpg';
+    content: '../media/batthern.png';
     display: none;
 }
 
@@ -94,11 +94,11 @@ Main Components
 }
 
 .projects-container .cd-single-project:nth-of-type(2)::after {
-    background-image: url("../media/clubs/img-2-small.jpg");
+    background-image: url("../media/batthern.png");
 }
 
 .projects-container .cd-single-project:nth-of-type(2)::before {
-    content: '../media/clubs/img-2-small.jpg';
+    content: '../media/batthern.png';
 }
 
 .projects-container .cd-single-project:nth-of-type(3) {
@@ -106,11 +106,11 @@ Main Components
 }
 
 .projects-container .cd-single-project:nth-of-type(3)::after {
-    background-image: url("../media/clubs/img-3-small.jpg");
+    background-image: url("../media/batthern.png");
 }
 
 .projects-container .cd-single-project:nth-of-type(3)::before {
-    content: '../media/clubs/img-3-small.jpg';
+    content: '../media/batthern.png';
 }
 
 .projects-container .cd-single-project:nth-of-type(4) {
@@ -118,11 +118,11 @@ Main Components
 }
 
 .projects-container .cd-single-project:nth-of-type(4)::after {
-    background-image: url("../media/clubs/img-4-small.jpg");
+    background-image: url("../media/batthern.png");
 }
 
 .projects-container .cd-single-project:nth-of-type(4)::before {
-    content: '../media/clubs/img-4-small.jpg';
+    content: '../media/batthern.png';
 }
 
 .projects-container .cd-single-project.is-loaded {
@@ -168,20 +168,20 @@ Main Components
         transition: width 0s;
     }
     .projects-container .cd-single-project:first-of-type::before {
-        content: '../media/clubs/img-1-large.jpg';
+        content: '../media/batthern.png';
     }
     .projects-container .cd-single-project:first-of-type::after {
-        background-image: url("../media/clubs/img-1-large.jpg");
+        background-image: url("../media/batthern.png");
     }
     .projects-container .cd-single-project:nth-of-type(2) {
         top: 0;
         left: 25vw;
     }
     .projects-container .cd-single-project:nth-of-type(2)::before {
-        content: '../media/clubs/img-2-large.jpg';
+        content: '../media/batthern.png';
     }
     .projects-container .cd-single-project:nth-of-type(2)::after {
-        background-image: url("../media/clubs/img-2-large.jpg");
+        background-image: url("../media/batthern.png");
         background-position-x: -35px;
     }
     .projects-container .cd-single-project:nth-of-type(3) {
@@ -189,10 +189,10 @@ Main Components
         left: 50vw;
     }
     .projects-container .cd-single-project:nth-of-type(3)::before {
-        content: '../media/clubs/img-3-large.jpg';
+        content: '../media/batthern.png';
     }
     .projects-container .cd-single-project:nth-of-type(3)::after {
-        background-image: url("../media/clubs/img-3-large.jpg");
+        background-image: url("../media/batthern.png");
         background-position-x: 48px;
     }
     .projects-container .cd-single-project:nth-of-type(4) {
@@ -200,10 +200,10 @@ Main Components
         left: 75vw;
     }
     .projects-container .cd-single-project:nth-of-type(4)::before {
-        content: '../media/clubs/img-4-large.jpg';
+        content: '../media/batthern.png';
     }
     .projects-container .cd-single-project:nth-of-type(4)::after {
-        background-image: url("../media/clubs/img-4-large.jpg");
+        background-image: url("../media/batthern.png");
         background-position: 300px -110px;
     }
     .projects-container .cd-single-project::after {
