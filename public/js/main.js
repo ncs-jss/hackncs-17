@@ -46,7 +46,7 @@ $(window).bind("load", function () {
             }
             var address = baseUrl + "upcomingEvent.json";
             $.get(address, function (data) {
-                var imgUrl = "/media/events/" + data.image;
+                var imgUrl = data.image;
                 $("#event-description").html(data.desc);
                 $("#event-image").attr("src", imgUrl);
             });
@@ -90,11 +90,11 @@ $(window).bind("load", function () {
                 var imgBase = "/media/events/";
                 //First Image
                 var imgUrl = imgBase + data[0].image;
-                item.eq(0).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(..' + imgUrl + ')');
+                item.eq(0).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(..' + imgUrl + ')');
                 item.find("a").eq(0).attr("href", 0);
                 //Second Image
                 imgUrl = imgBase + data[1].image;
-                item.eq(1).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(..' + imgUrl + ')');
+                item.eq(1).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(..' + imgUrl + ')');
                 item.find("a").eq(1).attr("href", 1);
                 var len = data.length;
                 var i = 2;
@@ -102,11 +102,11 @@ $(window).bind("load", function () {
                     var node = section.clone(true);
                     item = node.find(".cd-item");
                     imgUrl = imgBase + data[i].image;
-                    item.eq(0).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(..' + imgUrl + ')');
+                    item.eq(0).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(..' + imgUrl + ')');
                     item.find("a").eq(0).attr("href", i);
                     //Second Image
                     imgUrl = imgBase + data[i + 1].image;
-                    item.eq(1).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(..' + imgUrl + ')');
+                    item.eq(1).css('background-image', 'linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url(..' + imgUrl + ')');
                     item.find("a").eq(1).attr("href", i + 1);
                     node.appendTo(parent);
                 }

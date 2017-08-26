@@ -231,22 +231,12 @@ Main content
 
 .cd-item.item-1 {
     /*background-color: #363558;*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/tech_trek.jpg);
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/tech_trek.jpg);*/
 }
 
 .cd-item.item-2 {
     /*background-color: #544173;*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/c.jpg);
-}
-
-.cd-item.item-3 {
-    /*background-color: #dadcdc;*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/op.jpg);
-}
-
-.cd-item.item-4 {
-    /*background-color: #65d29b;*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/web.jpg);
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/events/c.jpg);*/
 }
 
 .cd-item h2 {
