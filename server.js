@@ -60,6 +60,9 @@ app.get('/clubs', function (req, res) {
     });
 });
 app.get('/contri', function (req, res) {
+    res.redirect("/contributions");
+});
+app.get('/contributions', function (req, res) {
     res.sendFile('/contri.html', {
         root: './public'
     });
